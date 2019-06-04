@@ -1,8 +1,7 @@
 class AdvicesController < ApplicationController
 
   def index
-    @advices = Advices.all
-    authorize @advice
+    @advices = policy_scope(Advice)
   end
 
   def new
