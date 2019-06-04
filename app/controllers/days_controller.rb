@@ -33,9 +33,10 @@ class DaysController < ApplicationController
     authorize @day
   end
 
-  def update
+  def destroy
     @day.destroy
     authorize @day
+  end
 
   private
 
