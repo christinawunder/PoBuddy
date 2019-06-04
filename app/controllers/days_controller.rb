@@ -14,6 +14,7 @@ class DaysController < ApplicationController
   def create
     @day = Day.new(day_params)
     @day.user = current_user
+    # create the day.links (trhough advices)
     authorise @day
     @day.save!
   end

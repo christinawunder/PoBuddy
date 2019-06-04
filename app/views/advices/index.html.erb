@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="container">
+    <% @advices.each do |advice| %>
+      <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= advice.description %></h5>
+        <p class="card-text"><%= advice.category %></p>
+        <a href="<%# advice.link %>" class="btn btn-primary">Go somewhere</a>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <div class="container">
+    <!-- CALENDAR -->
+
+  </div>
+</div>

@@ -1,6 +1,7 @@
 <% @days = Day.all %>
 <h1>I AM DAYS#INDEX</h1>
 <!-- ID name is subject to change, since we might share it between index and show views for the day -->
+<!-- first box: info of the day with symptoms, second box: links of the day -->
 <div id="calendar">
   <ul><% @days.each do |day| %>
     <li>Date: <%= day.date %></li>
@@ -12,3 +13,5 @@
   <% end %>
   </ul>
 </div>
+
+<%= render 'link_card' %>
