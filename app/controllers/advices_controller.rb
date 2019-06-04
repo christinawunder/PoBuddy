@@ -3,23 +3,18 @@ class AdvicesController < ApplicationController
 
   def index
     @advices = Advices.all
-  end
-
-  def show
+    authorize @advice
   end
 
   def new
     @advice = Advice.new
+    authorize @advice
   end
 
   def create
     @advice = Advice.new(params[:advice])
     @advice.save
-    if @advice.save
-      redirect_to root_path
-    else
-      render :new
-    end
+    authorize @advice
   end
 
   private
