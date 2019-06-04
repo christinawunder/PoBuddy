@@ -4,6 +4,7 @@ class DaysController < ApplicationController
 
   def index
     @days = Day.all
+    authorize @day
   end
 
   def new
@@ -14,19 +15,27 @@ class DaysController < ApplicationController
   def create
     @day = Day.new(day_params)
     @day.user = current_user
+    authorise @day
     @day.save!
   end
 
   def show
+    authorize @day
   end
 
   def edit
+    authorize @day
   end
 
   def update
     @day.update(day_params)
     @day.save!
+    authorize @day
   end
+
+  def update
+    @day.destroy
+    authorize @day
 
   private
 
