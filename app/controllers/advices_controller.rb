@@ -1,5 +1,4 @@
 class AdvicesController < ApplicationController
-  before_action :set_advice, only: [:show]
 
   def index
     @advices = Advices.all
@@ -21,5 +20,9 @@ class AdvicesController < ApplicationController
 
   def set_advice
     @advice = Advice.find(params[:id])
+  end
+
+  def advice_params
+    params.require(:advice).permit(:day_id, :link_id)
   end
 end
