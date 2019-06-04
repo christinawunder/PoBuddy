@@ -3,12 +3,12 @@
 <!-- ID name is subject to change, since we might share it between index and show views for the day -->
 <div id="calendar">
   <ul><% @days.each do |day| %>
-    <li><%= day.date %></li>
-    <li><%= day.breast_pain %></li>
-    <li><%= day.head_pain %></li>
-    <li><%= day.abdominal_pain %></li>
-    <li><%= day.bleeding %></li>
-    <li><%= day.bad_mood %></li>
+    <li>Date: <%= day.date %></li>
+    <li>Breast Pain: <%= day.breast_pain %></li>
+    <li>Head Pain: <%= day.head_pain %></li>
+    <li>Abdominal Pain: <%= day.abdominal_pain %></li>
+    <li>Bleeding: <%= day.bleeding %></li>
+    <li>Bad Mood: <%= day.bad_mood %></li>
   <% end %>
   </ul>
 </div>
