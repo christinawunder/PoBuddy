@@ -1,0 +1,14 @@
+<% @days = Day.all %>
+<h1>I AM DAYS#INDEX</h1>
+<!-- ID name is subject to change, since we might share it between index and show views for the day -->
+<div id="calendar">
+  <ul><% @days.each do |day| %>
+    <li><%= day.date %></li>
+    <li><%= day.breast_pain %></li>
+    <li><%= day.head_pain %></li>
+    <li><%= day.abdominal_painab %></li>
+    <li><%= day.bleeding %></li>
+    <li><%= day.bad_mood %></li>
+  <% end %>
+  </ul>
+</div>
