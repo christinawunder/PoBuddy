@@ -1,30 +1,27 @@
 class AdvicesController < ApplicationController
-  before_action :set_advice, only: [:show]
 
   def index
-    @advices = Advices.all
-  end
-
-  def show
+    @advices = policy_scope(Advice)
   end
 
   def new
     @advice = Advice.new
+    authorize @advice
   end
 
   def create
     @advice = Advice.new(params[:advice])
     @advice.save
-    if @advice.save
-      redirect_to root_path
-    else
-      render :new
-    end
+    authorize @advice
   end
 
   private
 
   def set_advice
     @advice = Advice.find(params[:id])
+  end
+
+  def advice_params
+    params.require(:advice).permit(:day_id, :link_id)
   end
 end

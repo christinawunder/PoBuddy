@@ -3,7 +3,7 @@ class DaysController < ApplicationController
   skip_before_action :authenticate_user!, only: :about
 
   def index
-    @days = Day.all
+    @days = policy_scope(Day)
   end
 
   def new
@@ -14,18 +14,28 @@ class DaysController < ApplicationController
   def create
     @day = Day.new(day_params)
     @day.user = current_user
+    # create the day.links (trhough advices)
+    authorise @day
     @day.save!
   end
 
   def show
+    authorize @day
   end
 
   def edit
+    authorize @day
   end
 
   def update
     @day.update(day_params)
     @day.save!
+    authorize @day
+  end
+
+  def destroy
+    @day.destroy
+    authorize @day
   end
 
   private

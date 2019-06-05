@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AdvicesControllerTest < ActionDispatch::IntegrationTest
+class LinkTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
