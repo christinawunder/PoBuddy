@@ -3,7 +3,10 @@ class DaysController < ApplicationController
   skip_before_action :authenticate_user!, only: :about
 
   def index
-    @days = policy_scope(Day)
+    @days = policy_scope(Day).where(user: current_user)
+    @day_by_date = @days.group_by(&:date)
+
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @advices = Advice.all
   end
 
