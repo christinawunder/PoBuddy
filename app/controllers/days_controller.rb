@@ -7,7 +7,6 @@ class DaysController < ApplicationController
     @day_by_date = @days.group_by(&:date)
 
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
-    @advices = Advice.all
   end
 
   def new
@@ -17,15 +16,19 @@ class DaysController < ApplicationController
 
   def create
     @day = Day.new(day_params)
+    authorize @day
     @day.user = current_user
-    @advices = create_advices_combo # private method below
-    authorise @day
-    @day.save!
+    if @day.save!
+      @day.advices = create_advices_combo # private method below
+      redirect_to day_path(@day)
+    else
+      render :new
+    end
   end
 
   def show
     authorize @day
-    @advices
+    @advices = @day.advices
   end
 
   def edit
@@ -60,7 +63,7 @@ class DaysController < ApplicationController
   end
 
   def create_advice(link, day)
-    Advice.create(link: link, day: day)
+    Advice.create!(link: link, day: day)
   end
 
   def bleeding_links
