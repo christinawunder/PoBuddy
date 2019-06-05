@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_141000) do
+ActiveRecord::Schema.define(version: 2019_06_04_141100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "advices", force: :cascade do |t|
-    t.string "category"
-    t.text "description"
+    t.bigint "link_id"
+    t.bigint "day_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "day_id"
     t.index ["day_id"], name: "index_advices_on_day_id"
+    t.index ["link_id"], name: "index_advices_on_link_id"
   end
 
   create_table "days", force: :cascade do |t|
@@ -62,5 +62,6 @@ ActiveRecord::Schema.define(version: 2019_06_04_141000) do
   end
 
   add_foreign_key "advices", "days"
+  add_foreign_key "advices", "links"
   add_foreign_key "days", "users"
 end
