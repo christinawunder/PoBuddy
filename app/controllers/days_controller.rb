@@ -14,7 +14,7 @@ class DaysController < ApplicationController
   def create
     @day = Day.new(day_params)
     @day.user = current_user
-    create_advice_combo # private method below
+    create_advices_combo # private method below
     authorise @day
     @day.save!
   end
@@ -49,7 +49,7 @@ class DaysController < ApplicationController
     params.require(:day).permit(:bleeding, :bad_mood, :head_pain, :abdominal_pain, :breast_pain, :date, :user_id)
   end
 
-  def daily_advices
+  def create_advices_combo
     advices_combo = []
     advices_combo << [bleeding_links, bad_mood_links, head_pain_links, abdominal_pain_links, breast_pain_links]
   end
@@ -83,7 +83,7 @@ class DaysController < ApplicationController
   end
 
   def abdominal_pain_links
-    if @day.abdominal_pain >= 2 && @day.abdominal_pain < 4
+    if @day.abdominal_pain >= 1 && @day.abdominal_pain < 4
       create_advice(Link.all.where(category: 'abdominal pain').sample)
     elsif @day.abdominal_pain >= 4
       2.times(create_advice(Link.all.where(category: 'abdominal pain').sample))
@@ -91,7 +91,7 @@ class DaysController < ApplicationController
   end
 
   def breast_pain_links
-    if @day.breast_pain >= 2 && @day.breast_pain < 4
+    if @day.breast_pain >= 1 && @day.breast_pain < 4
       create_advice(Link.all.where(category: 'breast pain').sample)
     elsif @day.breast_pain >= 4
       2.times(create_advice(Link.all.where(category: 'breast pain').sample))
