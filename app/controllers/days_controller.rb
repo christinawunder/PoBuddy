@@ -4,6 +4,7 @@ class DaysController < ApplicationController
 
   def index
     @days = policy_scope(Day)
+    @day = Day.new
   end
 
   def new

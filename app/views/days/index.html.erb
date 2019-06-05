@@ -13,5 +13,15 @@
   <% end %>
   </ul>
 </div>
+<%= simple_form_for(@day) do |f| %>
+    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"}, as: :hidden%>
+    <%= f.input :breast_pain %>
+    <%= f.input :head_pain %>
+    <%= f.input :abdominal_pain %>
+    <%= f.input :bleeding %>
+    <%= f.input :bad_mood %>
+    <%= f.button :submit, "Save", class: "btn btn-primary" %>
+<% end %>
 
-<%= render 'link_card' %>
+
+<%#= render 'link_card' %>
