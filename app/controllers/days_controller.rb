@@ -4,7 +4,7 @@ class DaysController < ApplicationController
 
   def index
     @days = policy_scope(Day)
-    @advices
+    @advices = Advice.all
   end
 
   def new
@@ -22,6 +22,7 @@ class DaysController < ApplicationController
 
   def show
     authorize @day
+    @advices
   end
 
   def edit
