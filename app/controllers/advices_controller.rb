@@ -9,11 +9,11 @@ class AdvicesController < ApplicationController
     authorize @advice
   end
 
-  def create
-    @advice = Advice.new(params[:advice])
-    @advice.save
-    authorize @advice
-  end
+  # def create
+  #   @advice = Advice.new(params[:advice])
+  #   @advice.save
+  #   authorize @advice
+  # end
 
   private
 
