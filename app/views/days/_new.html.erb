@@ -1,0 +1,10 @@
+<h3>Tell us how you feel today</h3>
+<%=  %>
+<%= simple_form_for @day do |f| %>
+  <%= f.collection_radio_buttons :bleeding, @radio_collection, :first, :last %>
+  <%= f.collection_radio_buttons :bad_mood, @radio_collection, :first, :last %>
+  <%= f.collection_radio_buttons :head_pain, @radio_collection, :first, :last %>
+  <%= f.collection_radio_buttons :abdominal_pain, @radio_collection, :first, :last %>
+  <%= f.collection_radio_buttons :breast_pain, @radio_collection, :first, :last %>
+  <%= f.button :submit %>
+<% end %>
