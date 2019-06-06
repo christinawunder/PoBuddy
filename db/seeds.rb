@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Day.destroy_all
 Day.create!(date: Date.today, bleeding: 1, bad_mood: 3, head_pain: 2, abdominal_pain: 2, breast_pain: 1, user_id: 1)
 Day.create!(date: Date.today - 1, bleeding: 3, bad_mood: 3, head_pain: 4, abdominal_pain: 4, breast_pain: 2, user_id: 1)
@@ -49,3 +50,4 @@ Link.create!(media:"Video", title:"Doctors Answer Commonly Googled Period Questi
 Link.create!(media:"Video", title:"Yoga For Menstrual Cramp Relief", url: "https://www.youtube.com/watch?v=8tJe6QhpZ3M", category: "general")
 Link.create!(media:"Video", title:"7 Weird Things Your Period Does To Your Body", url:"https://www.youtube.com/watch?v=hOfkWV-6pN8", category: "general")
 Link.create!(media:"Video", title:"This is Your Period in 2 Minutes ", url:"https://www.youtube.com/watch?v=WOi2Bwvp6hw", category: "general")
+
