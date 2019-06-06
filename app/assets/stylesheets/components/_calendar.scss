@@ -1,5 +1,5 @@
 td.not-month {
-  background-color: #af94ec;
+  background-color: #5b8e7d;
 }
 
 .bleeding1{
@@ -20,8 +20,39 @@ td.not-month {
 
 td {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+}
+td.today{
+  border-color: blue;
+  border-width: 1px;
+  border: true;
 }
 
 th {
   text-align:center;
+  font-family: 'Arial', sans-serif;
+  border-style: thin;
+  border-bottom-color: #5b8e7d;
+}
+#calendar {
+  border-style: ridge;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #5b8e7d;
+  margin-bottom: 10px;
+}
+#calendar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+#month-indicator {
+  padding: 0;
+}
+#calendar-content-days {
+  padding: 0;
+}
+.table-bordered {
+  margin-bottom: 1px;
 }

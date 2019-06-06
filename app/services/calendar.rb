@@ -3,9 +3,9 @@ class Calendar < Struct.new(:view, :date, :callback, :personal_days)
   START_DAY = :sunday
 
   delegate :content_tag, to: :view
-
+# table-bordered table-striped below in class if you fuck up, Niko!
   def table
-    content_tag :table, class: "calendar table table-bordered table-striped" do
+    content_tag :table, class: "calendar table" do
       header + week_rows
     end
   end
