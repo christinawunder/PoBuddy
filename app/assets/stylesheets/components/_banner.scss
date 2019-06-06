@@ -13,6 +13,8 @@
   opacity: 0.75;
   max-height: 50vh;
   max-width: 40vw;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 #sign-up-form {
@@ -23,8 +25,8 @@
   align-items: center;
 }
 
-.row-banner {
-  height: 100vh;
+#row-banner {
+  height: 750px;
   width: 100vw;
   align-items: center;
 }
@@ -33,6 +35,20 @@
   color: white;
 }
 
+.container-banner h1 {
+  font-size: 6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-banner h3 {
+  font-size: 3rem;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-banner p {
+  font-size: 24px;
+}
 .title-padding {
   padding: 7%;
 }
@@ -51,11 +67,10 @@
   background-color: #5B8E7D;
   border-color: #5B8E7D;
   color: white;
-
 }
 
 .button {
-  font: bold 1.5rem Roboto;
+  font: bold 2rem Roboto;
   text-decoration: none;
   background-color: #004a2f;
   color: white;
