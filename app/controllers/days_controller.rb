@@ -9,7 +9,7 @@ class DaysController < ApplicationController
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
     @day = Day.new(date: @date)
-    @radio_collection = [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]
+    @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
   def new
