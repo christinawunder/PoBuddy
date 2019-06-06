@@ -34,6 +34,13 @@ class DaysController < ApplicationController
   def show
     authorize @day
     @advices = @day.advices
+    @days = policy_scope(Day).where(user: current_user)
+    @day_by_date = @days.group_by(&:date)
+
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+
+    @day = Day.new(date: @date)
+    @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
   def edit
