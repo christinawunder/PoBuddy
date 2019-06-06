@@ -78,7 +78,6 @@ class DaysController < ApplicationController
 
   def bleeding_links
     @link = Link.all.where(category: 'bleeding').sample
-    binding.pry
     if @day.bleeding >= 1 && @day.bleeding < 4
       create_advice(@link, @day)
     elsif @day.bleeding >= 4
