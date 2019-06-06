@@ -18,9 +18,10 @@ td.not-month {
   background-color: #5b8e7d;
 }
 td {
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
+  justify-content: center;
+
 }
 td.today {
   border-color: #c57b57;
@@ -59,6 +60,7 @@ tr {
   margin-bottom: 10px;
   margin-left: 0;
   margin-right: 0;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 #calendar-container {
   display: flex;
@@ -75,4 +77,7 @@ tr {
 }
 .table {
   margin-bottom: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #5b8e7d;
+  border-bottom-width: 2px;
 }
