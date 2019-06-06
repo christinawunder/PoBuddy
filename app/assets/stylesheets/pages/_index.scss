@@ -1,2 +1,32 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.background-index{
+  background-image: asset-url('back.jpg');
+  background-size: cover;
+    min-height: 100%;
+  min-width: 1024px;
+  display: flex;
+justify-content: space-evenly;
+margin: 0px;
+height: 130vh;
+color: white;
+background-color: transparent;
+}
+// .container-index{
+
+// }
+
+.greeting{
+  background-color : red;
+  margin: 70px;
+}
+
+.calendar-index{
+  background-color: yellow;
+  margin: 70px;
+}
+
+// .half{
+//   width: 50%
+// }
