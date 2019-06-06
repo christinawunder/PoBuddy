@@ -1,12 +1,14 @@
 <h1>Here are some recommendations for you today</h1>
 
 <div class="container">
-      <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+  <% @advices.each do |advice| %>
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="<%= advice.photo_url %>" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">What is a "normal" menstrual cycle length?</h5>
         <p class="card-text">Category: bleeding</p>
         <a href="https://helloclue.com/articles/cycle-a-z/what's-normal-menstrual-cycle-length-and-variation" class="btn btn-primary" target="_blank">Read more</a>
       </div>
     </div>
-  </div>
+  <% end %>
+</div>
