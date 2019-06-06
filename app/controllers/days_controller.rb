@@ -77,7 +77,7 @@ class DaysController < ApplicationController
   end
 
   def bleeding_links
-    @link = Link.all.where(category: 'bleeding').sample
+    @link = Link.where(category: 'bleeding').sample
     if @day.bleeding >= 1 && @day.bleeding < 4
       create_advice(@link, @day)
     elsif @day.bleeding >= 4
@@ -86,7 +86,7 @@ class DaysController < ApplicationController
   end
 
   def bad_mood_links
-    @link = Link.all.where(category: 'bad_mood').sample
+    @link = Link.where(category: 'bad mood').sample
     if @day.bad_mood >= 1 && @day.bad_mood < 4
       create_advice(@link, @day)
     elsif @day.bad_mood >= 4
@@ -95,7 +95,7 @@ class DaysController < ApplicationController
   end
 
   def head_pain_links
-    @link = Link.all.where(category: 'head_pain').sample
+    @link = Link.where(category: 'head pain').sample
     if @day.head_pain >= 1 && @day.head_pain < 4
       create_advice(@link, @day)
     elsif @day.head_pain >= 4
@@ -104,7 +104,7 @@ class DaysController < ApplicationController
   end
 
   def abdominal_pain_links
-    @link = Link.all.where(category: 'abdominal_pain').sample
+    @link = Link.where(category: 'abdominal pain').sample
     if @day.abdominal_pain >= 1 && @day.abdominal_pain < 4
       create_advice(@link, @day)
     elsif @day.abdominal_pain >= 4
@@ -113,7 +113,7 @@ class DaysController < ApplicationController
   end
 
   def breast_pain_links
-    @link = Link.all.where(category: 'breast_pain').sample
+    @link = Link.where(category: 'breast pain').sample
     if @day.breast_pain >= 1 && @day.breast_pain < 4
       create_advice(@link, @day)
     elsif @day.breast_pain >= 4
