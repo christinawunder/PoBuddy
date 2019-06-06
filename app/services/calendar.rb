@@ -1,6 +1,15 @@
 class Calendar < Struct.new(:view, :date, :callback, :personal_days)
-  HEADER = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday]
+  HEADER = %w[Mon Tue Wed Thu Fri Sat Sun]
   START_DAY = :monday
+
+  # mon: "Mon",
+  # tue: "Tue",
+  # wed: "Wed",
+  # thu: "Thu",
+  # fri: "Fri",
+  # sat: "Sat",
+  # sun: "Sun"
+
 
   delegate :content_tag, to: :view
 # table-bordered table-striped below in class if you fuck up, Niko!

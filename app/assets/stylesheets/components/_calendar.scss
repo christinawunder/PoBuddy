@@ -21,7 +21,6 @@ td {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
-  flex-shrink: 1;
 }
 td.today {
   border-color: #c57b57;
@@ -37,6 +36,8 @@ tr > th {
   border-bottom-color: #5b8e7d;
   border-bottom-width: 2px;
   background-color: #c57b57;
+  font-size: 12px;
+  font-style: underline;
 }
 
 tr {
@@ -70,6 +71,7 @@ tr {
 }
 #calendar-content-days {
   padding: 0;
+  justify-content: center;
 }
 .table {
   margin-bottom: 0px;
