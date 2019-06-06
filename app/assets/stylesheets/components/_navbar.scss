@@ -10,3 +10,33 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+.nav-item{
+  font-size: 20px;
+line-height: 1rem;
+font-family: Soleil,Helvetica,Arial,sans-serif;
+font-weight: 100;
+letter-spacing: .08334rem;
+text-transform: uppercase;
+list-style-type: none;
+padding-right: 45rem;
+}
+
+.navbar{
+height: 100%;
+overflow: hidden;
+}
+
+.a{
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 25px
+}
+
+.nav-item:hover{
+  transition: 0.3s;
+  font-size: 20.5px;
+  color: #f3ba9c;
+
+}
+
+
