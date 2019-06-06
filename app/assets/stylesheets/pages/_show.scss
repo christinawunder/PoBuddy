@@ -1,14 +1,10 @@
 .background-index{
   background-image: asset-url('back.jpg');
   background-size: cover;
-  min-height: 100%;
-  min-width: 1024px;
   display: flex;
   justify-content: space-evenly;
-  margin: 0px;
   height: 130vh;
   color: white;
-  background-color: transparent;
 }
 
 .half-index{
