@@ -1,0 +1,20 @@
+<h3>Tell us how you feel today</h3>
+<%= simple_form_for @day do |f| %>
+  <%= f.label :bleeding %>
+  <%= f.collection_radio_buttons :bleeding, @radio_collection, :first, :last %>
+  <br>
+  <%= f.label :bad_mood %>
+  <%= f.collection_radio_buttons :bad_mood, @radio_collection, :first, :last %>
+  <br>
+  <%= f.label :head_pain %>
+  <%= f.collection_radio_buttons :head_pain, @radio_collection, :first, :last %>
+  <br>
+  <%= f.label :abdominal_pain %>
+  <%= f.collection_radio_buttons :abdominal_pain, @radio_collection, :first, :last %>
+  <br>
+  <%= f.label :breast_pain %>
+  <%= f.collection_radio_buttons :breast_pain, @radio_collection, :first, :last %>
+  <br>
+  <%= f.label :Let_us_know! %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>

@@ -1,13 +1,21 @@
+
 <div class="background-index">
   <div id="greeting " class="half-index">
     <h1>Hello love, welcome back aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
   </div>
   <div id= "calendar-index" class="half-index">
     <div class="calendar">
-      <h1>coucou je suis le calendrier</h1>
+    <%= render 'shared/calendar' %>
     </div>
     <div class="symptom-input">
-    <h1>coucou je suis les symptomes</h1>
+    <%= render 'new' %>
     </div>
   </div>
 </div>
+
+<!-- ID name is subject to change, since we might share it between index and show views for the day -->
+<!-- first box: info of the day with symptoms, second box: links of the day -->
+
+
+
+
