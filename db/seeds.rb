@@ -9,9 +9,9 @@
 User.create(email: "test@test.com", password: "123456789")
 
 Day.destroy_all
-Day.create!(date: Date.today, bleeding: 1, bad_mood: 3, head_pain: 2, abdominal_pain: 2, breast_pain: 1, user_id: 1)
 Day.create!(date: Date.today - 1, bleeding: 3, bad_mood: 3, head_pain: 4, abdominal_pain: 4, breast_pain: 2, user_id: 1)
 Day.create!(date: Date.today - 2, bleeding: 4, bad_mood: 1, head_pain: 3, abdominal_pain: 1, breast_pain: 3, user_id: 1)
+Day.create!(date: Date.today - 3, bleeding: 5, bad_mood: 3, head_pain: 2, abdominal_pain: 2, breast_pain: 1, user_id: 1)
 
 default_pic_bleeding = 'https://unsplash.com/photos/fhWNnHmW40Y'
 default_pic_abdominal_pain = 'https://images.unsplash.com/photo-1505334559002-c2103a3e106b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
