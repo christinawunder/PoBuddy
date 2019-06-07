@@ -2,11 +2,14 @@
 
 
 #card-show{
-  background-color: rgba(255, 255, 255, 0.62);
-
 
 }
+
 #calendar-show{
   display:flex;
   flex-direction: column;
+}
+
+.title-advice-display {
+  text-align: center;
 }
