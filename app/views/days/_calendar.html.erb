@@ -1,4 +1,4 @@
-<div id="calendar" class="col-md-5">
+<div id="calendar" class="col-md-10">
   <div class="row">
     <div class="col-md-12 text-center" id="month-indicator">
       <div class="well controls">
@@ -18,14 +18,21 @@
         <%= date.day %>
         <% if @day_by_date[date] %>
           <% @day_by_date[date].each do |day| %>
-            <!-- Nikos -->
-            <%= link_to " ++", day_path(day) %>
+            <%= link_to "+", day_path(day) %>
+          <% if day.pain? %>
+          <br>
+            <i class="fas fa-bolt"></i>
+          <% end %>
+          <% if day.bad_mood %>
+            <i class="fas fa-frown"></i>
+          <% end %>
+          <br>
           <% end %>
         <% end %>
       <% end %>
     </div>
   </div>
-  <div id="woof-woof">
+<!--   <div id="woof-woof">
       <ul>Date: <%= @day.date %>
         <li>Breast Pain: <%= @day.breast_pain %></li>
         <li>Head Pain: <%= @day.head_pain %></li>
@@ -33,5 +40,10 @@
         <li>Bleeding: <%= @day.bleeding %></li>
         <li>Bad Mood: <%= @day.bad_mood %></li>
       </ul>
+  </div> -->
+   <br>
+  <div id="symptom-input">
+    <%= render 'new' %>
   </div>
+
 </div>

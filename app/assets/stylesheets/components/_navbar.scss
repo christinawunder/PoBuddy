@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   margin-bottom: 0px;
+  position: absolute;
 }
 #navbar-space{
   display: flex;
@@ -25,17 +26,20 @@ letter-spacing: .08334rem;
 text-transform: uppercase;
 list-style-type: none;
 text-decoration: none;
-}
 
-// .navbar{
-// height: 100%;
-// overflow: hidden;
-// }
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size .2s;
+}
 
 .nav-item:hover{
   transition: 0.3s;
   font-size: 20.5px;
   color: #f3ba9c;
+   background-size: 4px 50px;
 
 }
 
