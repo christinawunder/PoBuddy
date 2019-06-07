@@ -1,5 +1,3 @@
-require "ibm_watson"
-
 class SentimentAnalyser
 
   def initializer
