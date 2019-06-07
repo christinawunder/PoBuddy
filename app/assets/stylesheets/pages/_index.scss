@@ -4,17 +4,10 @@
 .background-index{
   background-image: asset-url('back.jpg');
   background-size: 100%;
-
-      // -webkit-background-size: contain;
-    // -moz-background-size: contain;
-    // -o-background-size: contain;
-    // background-size: contain;
-
-
   display: flex;
   justify-content: space-evenly;
   height: 130vh;
-  color: white;
+  color: black;
 }
 
 .half-index{

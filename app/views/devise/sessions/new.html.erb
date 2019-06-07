@@ -1,9 +1,9 @@
 <div class="container-page">
   <div class="container-banner">
-    <div class="row row-banner">
+    <div class="row" id="row-banner">
       <div class="col-sm-12 col-md-6 title-padding">
         <h1>Pobuddy</h1>
-        <h3> <strong>A free period tracker!</strong></h3>
+        <h3> <em>A free period tracker!</em></h3>
         <br>
         <a href="#redirect-to-features" class="button">Discover how!</a>
       </div>
@@ -30,42 +30,47 @@
 
       <%= render "devise/shared/links", id:"link-color" %>
       </div>
-
     </div>
   </div>
-  <div id="redirect-to-features">
-    <div class="subtitle-display margin-bottom">
-      <h2><em>Learn more about your body on our website, with articles about period:</em></h2>
-      <div class="cards-display">
-        <div class="card-trip">
-            <%= image_tag "bubble-speak.png", alt: "alttext" %>
-          <div class="card-trip-infos" id="padding-top-card-trip-infos">
-            <div>
-              <p>Let us know how you feel, by talking to us</p>
+
+  <div class="background-image-template">
+    <div id="redirect-to-features" class="background-image-features">
+      <div class="subtitle-display margin-bottom">
+        <h2><em>Learn more about your body on our website, with articles about period:</em></h2>
+        <div class="cards-display">
+          <div class="card-trip">
+              <%= image_tag "bubble-speak.png", alt: "alttext" %>
+            <div class="card-trip-infos" id="padding-top-card-trip-infos">
+              <div>
+                <h2>You talk</h2>
+                <p>and tell us know how you feel</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card-trip">
-          <%= image_tag "analyse-data.png", alt: "alttext", id:"img-size" %>
-          <div class="card-trip-infos" id="padding-top-card-trip-infos" >
-            <div >
-              <p>We analyze what you said...</p>
+          <div class="card-trip">
+            <%= image_tag "analyse-data.png", alt: "alttext", id:"img-size" %>
+            <div class="card-trip-infos" id="padding-top-card-trip-infos" >
+              <div >
+                <h2>We analyze</h2>
+                <p>your mood and concerns</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card-trip">
-          <%= image_tag "paper-plane2.png", alt: "alttext", id:"img-size" %>
-          <div class="card-trip-infos" id="padding-top-card-trip-infos">
-            <div>
-              <p>We bring you quality advices !</p>
+          <div class="card-trip">
+            <%= image_tag "paper-plane2.png", alt: "alttext", id:"img-size" %>
+            <div class="card-trip-infos" id="padding-top-card-trip-infos">
+              <div>
+                <h2>We bring</h2>
+                <p>you quality and helpful advices !</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </div>
 
 

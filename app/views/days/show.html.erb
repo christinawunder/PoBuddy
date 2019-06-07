@@ -1,33 +1,24 @@
-
 <div class="background-index">
-  <div  id="card-show" class=" col-6 half-index">
-  <h1>Here are some recommendations for you today</h1>
- <div class="card" style="width: 18rem;">
-   <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
-   <div class="card-body">
-     <h5 class="card-title">What is a "normal" menstrual cycle length?</h5>
-     <p class="card-text">Category: bleeding</p>
-     <a href="https://helloclue.com/articles/cycle-a-z/what's-normal-menstrual-cycle-length-and-variation" class="btn btn-primary" target="_blank">Read more</a>
-   </div>
-  </div>
+
+
+  <div id="card-show" class=" col-6 half-index">
+    <h1>Here are some recommendations for you today</h1>
+    <% @advices.each do |advice| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= advice.link.title %></h5>
+        <p class="card-text">Category: <%= advice.link.category %></p>
+        <a href="<%= advice.link.url %>" class="btn btn-primary" target="_blank">Read more</a>
+      </div>
+    </div>
+    <% end %>
   </div>
 
   <div id= "calendar-show" class=" col-4 half-index">
-    <div class="calendar">
-    <%= render 'days/calendar' %>
-    </div>
+     <%= render 'days/calendar' %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

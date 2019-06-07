@@ -1,11 +1,12 @@
 .navbar-lewagon {
-  background: #5B8E7D;
+  background: rgba(0,0,0,.35);
   opacity: 0.85;
-  color: rgba(0,0,0,0.3);
+  // color: rgba(0,0,0,0.3);
   width: 100vw;
   position: sticky;
   top: 0;
   margin-bottom: 0px;
+  position: absolute;
 }
 #navbar-space{
   display: flex;
