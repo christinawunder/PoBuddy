@@ -21,7 +21,9 @@ td {
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
   justify-content: center;
-
+}
+td:hover {
+  background-color: lightgrey;
 }
 td.today {
   border-color: #c57b57;
