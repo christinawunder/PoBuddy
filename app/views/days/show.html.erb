@@ -1,13 +1,13 @@
 <div class="background-index">
-  <div  id="card-show" class="half-index">
+  <div id="card-show" class="half-index">
     <h1>Here are some recommendations for you today</h1>
     <% @advices.each do |advice| %>
       <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="<%= advice.photo_url %>" alt="Card image cap">
+      <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">What is a "normal" menstrual cycle length?</h5>
-          <p class="card-text">Category: <%= advice.category %></p>
-          <a href="<%= advice.url %>" class="btn btn-primary" target="_blank">Read more</a>
+          <h5 class="card-title"><%= advice.link.title %></h5>
+          <p class="card-text">Category: <%= advice.link.category %></p>
+          <a href="<%= advice.link.url %>" class="btn btn-primary" target="_blank">Read more</a>
         </div>
       </div>
     <% end %>

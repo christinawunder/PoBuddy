@@ -72,6 +72,7 @@ class DaysController < ApplicationController
   def create_advices_combo
     advices_combo = []
     advices_combo << [
+      general_link,
       (bleeding_links if @day.bleeding),
       (bad_mood_links if @day.bad_mood),
       (head_pain_links if @day.head_pain),
@@ -82,6 +83,11 @@ class DaysController < ApplicationController
 
   def create_advice(link, day)
     Advice.create!(link: link, day: day)
+  end
+
+  def general_link
+    @link = Link.where(category: 'general').sample
+    create_advice(@link, @day)
   end
 
   def bleeding_links

@@ -13,10 +13,11 @@ Day.create!(date: Date.today - 1, bleeding: 3, bad_mood: 3, head_pain: 4, abdomi
 Day.create!(date: Date.today - 2, bleeding: 4, bad_mood: 1, head_pain: 3, abdominal_pain: 1, breast_pain: 3, user_id: 1)
 Day.create!(date: Date.today - 3, bleeding: 5, bad_mood: 3, head_pain: 2, abdominal_pain: 2, breast_pain: 1, user_id: 1)
 
-default_pic_bleeding = 'https://unsplash.com/photos/fhWNnHmW40Y'
+default_pic_bleeding = 'https://images.unsplash.com/photo-1531354755998-195b9eca7061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80'
 default_pic_abdominal_pain = 'https://images.unsplash.com/photo-1505334559002-c2103a3e106b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
 default_pic_breast_pain = 'https://images.unsplash.com/photo-1518208734895-46d2ff97e480?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1293&q=80'
 default_pic_head_pain = 'https://images.unsplash.com/photo-1535083988052-565ca9546643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+default_pic_bad_mood = 'https://images.unsplash.com/photo-1537152443565-83a95138a61c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80'
 default_pic_general = 'https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80'
 
 Link.destroy_all
@@ -43,10 +44,10 @@ Link.create!(media: "Article", title:"A Headache Before Period vs. a Headache Du
 Link.create!(media: "Article", title: "Headaches and hormones: What's the connection?", url:"https://www.mayoclinic.org/diseases-conditions/chronic-daily-headaches/in-depth/headaches/art-20046729", category: "head pain", photo_url: default_pic_head_pain)
 Link.create!(media: "Article", title: "Headaches, migraines, and the menstrual cycle", url:"https://helloclue.com/articles/cycle-a-z/headaches-migraines-and-the-menstrual-cycle", category: "head pain", photo_url: 'https://images.ctfassets.net/juauvlea4rbf/760Tjc5szaLB4yiUVi6U8O/0756cd70210635c0c9fe88aac9461ae0/Cyclical_headaches_contenful.svg?w=1920&h=960&fit=fill')
 
-Link.create!(media:"Article", title: "How to Deal with Premenstrual Mood Swings", url:"https://www.healthline.com/health/pms-mood-swings", category: "bad mood", photo_url: '')
-Link.create!(media:"Article", title: "Premenstrual Syndrome Symptoms and How to Relieve Them", url:"https://flo.health/menstrual-cycle/health/pms-and-pmdd/premenstrual-syndrome-symptoms", category: "bad mood", photo_url: '')
-Link.create!(media:"Article", title: "Premenstrual syndrome (PMS) : questions and answers", url: "https://www.womenshealth.gov/menstrual-cycle/premenstrual-syndrome", category: "bad mood", photo_url: '')
-Link.create!(media:"Article", title:" Understand your premenstrual syndrome", url:"https://www.healthline.com/health/premenstrual-syndrome", category: "bad mood", photo_url: '')
+Link.create!(media:"Article", title: "How to Deal with Premenstrual Mood Swings", url:"https://www.healthline.com/health/pms-mood-swings", category: "bad mood", photo_url: default_pic_bad_mood)
+Link.create!(media:"Article", title: "Premenstrual Syndrome Symptoms and How to Relieve Them", url:"https://flo.health/menstrual-cycle/health/pms-and-pmdd/premenstrual-syndrome-symptoms", category: "bad mood", photo_url: default_pic_bad_mood)
+Link.create!(media:"Article", title: "Premenstrual syndrome (PMS) : questions and answers", url: "https://www.womenshealth.gov/menstrual-cycle/premenstrual-syndrome", category: "bad mood", photo_url: default_pic_bad_mood)
+Link.create!(media:"Article", title:" Understand your premenstrual syndrome", url:"https://www.healthline.com/health/premenstrual-syndrome", category: "bad mood", photo_url: default_pic_bad_mood)
 Link.create!(media:"Article", title: "Meditation, stress, and the menstrual cycle", url:"https://helloclue.com/articles/cycle-a-z/meditation-stress-your-cycle", category: "bad mood", photo_url: 'https://images.ctfassets.net/juauvlea4rbf/6mQUnIIgGAgUCa2sQIu4io/8162fe7ddab10529253e59ad06375543/Meditation__stress_and_your_cycle_contenful_2x.png?w=1920&h=960&fit=fill')
 
 Link.create!(media:"Meme", title:"21 Things That Prove Periods Are Actually Pretty Funny", url: "https://www.buzzfeed.com/caseyrackham/periods-are-pretty-funny", category: "general", photo_url: '')
