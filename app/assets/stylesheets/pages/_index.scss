@@ -3,26 +3,25 @@
 
 .background-index{
   background-image: asset-url('back.jpg');
-  background-size: cover;
-  min-height: 100%;
-  min-width: 1024px;
+  background-size: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin: 0px;
   height: 130vh;
-  color: white;
-  background-color: transparent;
-  padding-top: 6rem;
+  color: black;
 }
 
 .half-index{
-  width: 50%;
-  background-color: transparent;
   margin: 70px;
+  padding-top: 20px;
   word-break:break-all;
 }
 
 #calendar-index{
   display:flex;
   flex-direction: column;
+  word-break:break-all;
+}
+
+#greeting-index{
+background-index:  rgba(255, 255, 255, 0.62)
 }
