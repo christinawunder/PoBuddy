@@ -1,7 +1,7 @@
 .container-banner {
   width: 100vw;
   background-image: asset-url('banner-sign-up-page');
-  background-position: center;
+  background-position: inherit;
   background-size: cover;
   height: 750px;
 }
@@ -15,6 +15,7 @@
   max-width: 40vw;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  margin-top: 6.5rem;
 }
 
 #sign-up-form {
