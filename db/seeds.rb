@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 User.create(email: "test@test.com", password: "123456789")
 
 Day.destroy_all
@@ -50,8 +51,8 @@ Link.create!(media:"Article", title: "Premenstrual syndrome (PMS) : questions an
 Link.create!(media:"Article", title:" Understand your premenstrual syndrome", url:"https://www.healthline.com/health/premenstrual-syndrome", category: "bad mood", photo_url: default_pic_bad_mood)
 Link.create!(media:"Article", title: "Meditation, stress, and the menstrual cycle", url:"https://helloclue.com/articles/cycle-a-z/meditation-stress-your-cycle", category: "bad mood", photo_url: 'https://images.ctfassets.net/juauvlea4rbf/6mQUnIIgGAgUCa2sQIu4io/8162fe7ddab10529253e59ad06375543/Meditation__stress_and_your_cycle_contenful_2x.png?w=1920&h=960&fit=fill')
 
-Link.create!(media:"Meme", title:"21 Things That Prove Periods Are Actually Pretty Funny", url: "https://www.buzzfeed.com/caseyrackham/periods-are-pretty-funny", category: "general", photo_url: '')
-Link.create!(media:"Meme", title: "50 Period Memes That Will Make You Laugh Through That Pain", url: "https://www.boredpanda.com/funny-period-memes/?utm_source=google&utm_medium=organic&utm_campaign=organic", category: "general", photo_url: '')
+Link.create!(media:"Meme", title:"21 Things That Prove Periods Are Actually Pretty Funny", url: "https://www.buzzfeed.com/caseyrackham/periods-are-pretty-funny", category: "general", photo_url: default_pic_general)
+Link.create!(media:"Meme", title: "50 Period Memes That Will Make You Laugh Through That Pain", url: "https://www.boredpanda.com/funny-period-memes/?utm_source=google&utm_medium=organic&utm_campaign=organic", category: "general", photo_url: default_pic_general)
 
 Link.create!(media:"Video", title:"15 helpful period life hacks", url:"https://www.youtube.com/watch?v=xK4EgijWchU", category: "general", photo_url: default_pic_general)
 Link.create!(media:"Video", title:"Doctors Answer Commonly Googled Period Questions", url:"https://www.youtube.com/watch?v=3M3UDd0JmPE", category: "general", photo_url: default_pic_general)

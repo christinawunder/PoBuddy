@@ -1,4 +1,3 @@
-require 'byebug'
 class Calendar < Struct.new(:view, :date, :callback, :personal_days)
   HEADER = %w[Mon Tue Wed Thu Fri Sat Sun]
   START_DAY = :monday
