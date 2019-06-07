@@ -16,10 +16,16 @@
     <div class="col-md-12 text-center" id="calendar-content-days">
       <%= calendar @date, @day_by_date do |date| %>
         <%= date.day %>
+        <br>
         <% if @day_by_date[date] %>
           <% @day_by_date[date].each do |day| %>
-            <!-- Nikos -->
-            <%= link_to " ++", day_path(day) %>
+          <% if day.pain? %>
+            <i class="fas fa-bolt"></i>
+          <% end %>
+          <% if day.bad_mood %>
+            <i class="fas fa-frown"></i>
+          <% end %>
+            <%= link_to "+", day_path(day) %>
           <% end %>
         <% end %>
       <% end %>
