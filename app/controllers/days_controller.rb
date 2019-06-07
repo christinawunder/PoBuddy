@@ -7,6 +7,9 @@ class DaysController < ApplicationController
     @day_by_date = @days.group_by(&:date)
 
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
+
+    @day = Day.new(date: @date)
+    @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
   def new
@@ -16,10 +19,12 @@ class DaysController < ApplicationController
 
   def create
     @day = Day.new(day_params)
+    @day.user = current_user
+    @day.date = Date.today
     authorize @day
     @day.user = current_user
     if @day.save!
-      @day.advices = create_advices_combo # private method below
+      create_advices_combo # private method below
       redirect_to day_path(@day)
     else
       render :new
@@ -29,6 +34,13 @@ class DaysController < ApplicationController
   def show
     authorize @day
     @advices = @day.advices
+    @days = policy_scope(Day).where(user: current_user)
+    @day_by_date = @days.group_by(&:date)
+
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+
+    @day = Day.new(date: @date)
+    @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
   def edit
@@ -59,7 +71,13 @@ class DaysController < ApplicationController
 
   def create_advices_combo
     advices_combo = []
-    advices_combo << [bleeding_links, bad_mood_links, head_pain_links, abdominal_pain_links, breast_pain_links]
+    advices_combo << [
+      (bleeding_links if @day.bleeding),
+      (bad_mood_links if @day.bad_mood),
+      (head_pain_links if @day.head_pain),
+      (abdominal_pain_links if @day.abdominal_pain),
+      (breast_pain_links if @day.breast_pain)
+    ]
   end
 
   def create_advice(link, day)
@@ -67,42 +85,47 @@ class DaysController < ApplicationController
   end
 
   def bleeding_links
+    @link = Link.where(category: 'bleeding').sample
     if @day.bleeding >= 1 && @day.bleeding < 4
-      create_advice(Link.all.where(category: 'bleeding').sample, @day)
+      create_advice(@link, @day)
     elsif @day.bleeding >= 4
-      2.times(create_advice(Link.all.where(category: 'bleeding').sample, @day))
+      2.times { create_advice(@link, @day) }
     end
   end
 
   def bad_mood_links
+    @link = Link.where(category: 'bad mood').sample
     if @day.bad_mood >= 1 && @day.bad_mood < 4
-      create_advice(Link.all.where(category: 'bad mood').sample, @day)
+      create_advice(@link, @day)
     elsif @day.bad_mood >= 4
-      2.times(create_advice(Link.all.where(category: 'bad mood').sample, @day))
+      2.times { create_advice(@link, @day) }
     end
   end
 
   def head_pain_links
+    @link = Link.where(category: 'head pain').sample
     if @day.head_pain >= 1 && @day.head_pain < 4
-      create_advice(Link.all.where(category: 'head_ ain').sample, @day)
+      create_advice(@link, @day)
     elsif @day.head_pain >= 4
-      2.times(create_advice(Link.all.where(category: 'head pain').sample, @day))
+      2.times { create_advice(@link, @day) }
     end
   end
 
   def abdominal_pain_links
+    @link = Link.where(category: 'abdominal pain').sample
     if @day.abdominal_pain >= 1 && @day.abdominal_pain < 4
-      create_advice(Link.all.where(category: 'abdominal pain').sample, @day)
+      create_advice(@link, @day)
     elsif @day.abdominal_pain >= 4
-      2.times(create_advice(Link.all.where(category: 'abdominal pain').sample, @day))
+      2.times { create_advice(@link, @day) }
     end
   end
 
   def breast_pain_links
+    @link = Link.where(category: 'breast pain').sample
     if @day.breast_pain >= 1 && @day.breast_pain < 4
-      create_advice(Link.all.where(category: 'breast pain').sample, @day)
+      create_advice(@link, @day)
     elsif @day.breast_pain >= 4
-      2.times(create_advice(Link.all.where(category: 'breast pain').sample, @day))
+      2.times { create_advice(@link, @day) }
     end
   end
 end

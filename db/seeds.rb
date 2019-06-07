@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create(email: "test@test.com", password: "123456789")
+
 Day.destroy_all
-Day.create!(date: Date.today, bleeding: 1, bad_mood: 3, head_pain: 2, abdominal_pain: 2, breast_pain: 1, user_id: 1)
 Day.create!(date: Date.today - 1, bleeding: 3, bad_mood: 3, head_pain: 4, abdominal_pain: 4, breast_pain: 2, user_id: 1)
 Day.create!(date: Date.today - 2, bleeding: 4, bad_mood: 1, head_pain: 3, abdominal_pain: 1, breast_pain: 3, user_id: 1)
+Day.create!(date: Date.today - 3, bleeding: 5, bad_mood: 3, head_pain: 2, abdominal_pain: 2, breast_pain: 1, user_id: 1)
 
 
 Link.destroy_all
@@ -19,21 +21,21 @@ Link.create!(media: 'Article', title: 'Heavy menstrual bleeding', url:"https://w
 Link.create!(media: 'Article', title: 'Menstrual clots: Are they normal?', url:"https://www.medicalnewstoday.com/articles/322707.php", category: 'bleeding')
 Link.create!(media: 'Article', title: 'All about menstrual blood', url:"https://www.plim.fr/en/content/19-about-menstrual-blood", category: 'bleeding')
 
-Link.create!(media: 'Article', title:'Ovulation pain is real !', url: "https://helloclue.com/articles/cycle-a-z/ovulation-pain-101", category: 'abdominal_pain')
-Link.create!(media: 'Article', title: "cramps after period: What's the cause ?", url:"https://www.healthline.com/health/cramps-after-period#causes", category: 'abdominal_pain')
-Link.create!(media: 'Article', title: 'What are menstrual cramps?', url:"https://www.webmd.com/women/menstrual-cramps#1", category: 'abdominal_pain')
-Link.create!(media: 'Article', title: 'Endometriosis: Are scientists making any headway?', url: "https://www.medicalnewstoday.com/articles/325249.php", category: 'abdominal_pain')
+Link.create!(media: 'Article', title:'Ovulation pain is real !', url: "https://helloclue.com/articles/cycle-a-z/ovulation-pain-101", category: 'abdominal pain')
+Link.create!(media: 'Article', title: "cramps after period: What's the cause ?", url:"https://www.healthline.com/health/cramps-after-period#causes", category: 'abdominal pain')
+Link.create!(media: 'Article', title: 'What are menstrual cramps?', url:"https://www.webmd.com/women/menstrual-cramps#1", category: 'abdominal pain')
+Link.create!(media: 'Article', title: 'Endometriosis: Are scientists making any headway?', url: "https://www.medicalnewstoday.com/articles/325249.php", category: 'abdominal pain')
 
-Link.create!(media: 'Article', title:'Sensitive breast: 10 causes, other symptoms, treatment and more', url: "https://www.healthline.com/health/sensitive-breast", category: "breast_pain")
-Link.create!(media: 'Article', title:'7 Ways to Manage Painful Premenstrual Breasts ', url: "https://www.verywellhealth.com/cyclic-mastalgia-premenstrual-breast-pain-2721918", category: "breast_pain")
-Link.create!(media: 'Article', title:'Breast pain and your period', url:"https://helloclue.com/articles/cycle-a-z/breast-pain-and-the-menstrual-cycle", category: "breast_pain")
-Link.create!(media: 'Article', title: 'Why are my breasts sore before a period?', url: "https://www.medicalnewstoday.com/articles/323998.php", category: "breast_pain")
+Link.create!(media: 'Article', title:'Sensitive breast: 10 causes, other symptoms, treatment and more', url: "https://www.healthline.com/health/sensitive-breast", category: "breast pain")
+Link.create!(media: 'Article', title:'7 Ways to Manage Painful Premenstrual Breasts ', url: "https://www.verywellhealth.com/cyclic-mastalgia-premenstrual-breast-pain-2721918", category: "breast pain")
+Link.create!(media: 'Article', title:'Breast pain and your period', url:"https://helloclue.com/articles/cycle-a-z/breast-pain-and-the-menstrual-cycle", category: "breast pain")
+Link.create!(media: 'Article', title: 'Why are my breasts sore before a period?', url: "https://www.medicalnewstoday.com/articles/323998.php", category: "breast pain")
 
 
-Link.create!(media: "Article", title:"Remedies to get rid of headaches naturally", url:"https://www.healthline.com/nutrition/headache-remedies#section6", category: "head_pain")
-Link.create!(media: "Article", title:"Period headaches: How to make them go away", url:"https://lunapads.com/blogs/all/period-headaches-how-to-make-them-go-away", category: "head_pain")
-Link.create!(media: "Article", title:"A Headache Before Period vs. a Headache During Period: Are They The Same Symptom?", url:"https://flo.health/menstrual-cycle/health/period/headache-before-during-period", category: "head_pain")
-Link.create!(media: "Article", title: "Headaches and hormones: What's the connection?", url:"https://www.mayoclinic.org/diseases-conditions/chronic-daily-headaches/in-depth/headaches/art-20046729", category: "head_pain")
+Link.create!(media: "Article", title:"Remedies to get rid of headaches naturally", url:"https://www.healthline.com/nutrition/headache-remedies#section6", category: "head pain")
+Link.create!(media: "Article", title:"Period headaches: How to make them go away", url:"https://lunapads.com/blogs/all/period-headaches-how-to-make-them-go-away", category: "head pain")
+Link.create!(media: "Article", title:"A Headache Before Period vs. a Headache During Period: Are They The Same Symptom?", url:"https://flo.health/menstrual-cycle/health/period/headache-before-during-period", category: "head pain")
+Link.create!(media: "Article", title: "Headaches and hormones: What's the connection?", url:"https://www.mayoclinic.org/diseases-conditions/chronic-daily-headaches/in-depth/headaches/art-20046729", category: "head pain")
 Link.create!(media: "Article", title: "Headaches, migraines, and the menstrual cycle", url:"https://helloclue.com/articles/cycle-a-z/headaches-migraines-and-the-menstrual-cycle", category: "head pain")
 
 Link.create!(media:"Article", title: "How to Deal with Premenstrual Mood Swings", url:"https://www.healthline.com/health/pms-mood-swings", category: "bad mood")

@@ -1,7 +1,3 @@
-td.not-month {
-  background-color: #af94ec;
-}
-
 .bleeding1{
   background-color: #fc7e86;
 }
@@ -18,10 +14,70 @@ td.not-month {
   background-color: #db0210;
 }
 
+td.not-month {
+  background-color: #5b8e7d;
+}
 td {
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 3px;
+  justify-content: center;
+
+}
+td.today {
+  border-color: #c57b57;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
 }
 
-th {
+tr > th {
   text-align:center;
+  font-family: 'Arial', sans-serif;
+  border-bottom-style: ridge;
+  border-bottom-color: #5b8e7d;
+  border-bottom-width: 2px;
+  background-color: #c57b57;
+  font-size: 12px;
+  font-style: underline;
+}
+
+tr {
+  margin: 0;
+}
+
+.well {
+  border-bottom-style: ridge;
+  border-bottom-color: #5b8e7d;
+  border-bottom-width: 2px;
+  background-color: pink;
+}
+
+#calendar {
+  border-style: ridge;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #5b8e7d;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+#calendar-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+#month-indicator {
+  padding: 0;
+}
+#calendar-content-days {
+  padding: 0;
+  justify-content: center;
+}
+.table {
+  margin-bottom: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #5b8e7d;
+  border-bottom-width: 2px;
 }
