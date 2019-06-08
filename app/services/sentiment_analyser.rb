@@ -1,5 +1,4 @@
 class SentimentAnalyser
-
   def initializer
     set_client
   end
@@ -16,26 +15,26 @@ class SentimentAnalyser
   attr_reader :client, :result, :text
 
   def perform_request
-    @result = {
-      "document_tone": {
-        "tones": [
-          {
-            "score": 0.6165,
-            "tone_id": "sadness",
-            "tone_name": "Sadness"
-          },
-          {
-            "score": 0.829888,
-            "tone_id": "analytical",
-            "tone_name": "Analytical"
-          }
-        ]
-      }
-    }
-    # @result = client.tone(
-    #   tone_input: { text: text },
-    #   content_type: "application/json"
-    # )
+    @result = client.tone(
+      tone_input: { text: "Team, I know that times are tough! Product sales have been disappointing for the past three quarters. We have a competitive product, but we need to do a better job of selling it!" },
+      content_type: "application/json"
+    )
+    # @result = {
+    #   "document_tone": {
+    #     "tones": [
+    #       {
+    #         "score": 0.6165,
+    #         "tone_id": "sadness",
+    #         "tone_name": "Sadness"
+    #       },
+    #       {
+    #         "score": 0.829888,
+    #         "tone_id": "analytical",
+    #         "tone_name": "Analytical"
+    #       }
+    #     ]
+    #   }
+    # }
   end
 
   def evaluate_result
@@ -55,8 +54,7 @@ class SentimentAnalyser
   end
 
   def api_key
-    # ENV[IBM_API]
-    'B4B2kwcx3icc5ehW_Avql-104zj2E28JqKwJ7QFeP1IF'
+    ENV['IBM_API']
   end
 
   def url
