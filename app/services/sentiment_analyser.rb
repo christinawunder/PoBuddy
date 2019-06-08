@@ -39,7 +39,7 @@ class SentimentAnalyser
   end
 
   def evaluate_result
-
+    #
   end
 
   def expose_result
@@ -55,10 +55,11 @@ class SentimentAnalyser
   end
 
   def api_key
-    # COMES FROM YOUR SECRETS (ON Monday)
+    # ENV[IBM_API]
+    'B4B2kwcx3icc5ehW_Avql-104zj2E28JqKwJ7QFeP1IF'
   end
 
   def url
-    # COMES ON Monday
+    'https://gateway-fra.watsonplatform.net/tone-analyzer/api'
   end
 end
