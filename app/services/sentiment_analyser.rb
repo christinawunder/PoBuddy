@@ -36,6 +36,10 @@ class SentimentAnalyser
     #   }
     # }
   end
+# curl -X POST -u "apikey:B4B2kwcx3icc5ehW_Avql-104zj2E28JqKwJ7QFeP1IF" \
+# --header "Content-Type: application/json" \
+# --data-binary @tone_test.json \
+# "https://gateway-fra.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21"
 
   def evaluate_result
     #
