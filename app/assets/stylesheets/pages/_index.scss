@@ -13,13 +13,13 @@
   }
 }
 
-.half-index{
+.half-index {
   margin: 70px;
   padding-top: 20px;
-  word-break:break-all;
+  word-break: break-all;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.62);
+  // background-color: rgba(255, 255, 255, 0.62);
 
   .card {
     width: 46%;
@@ -31,7 +31,7 @@
 #calendar-index{
   display:flex;
   flex-direction: column;
-  word-break:break-all;
+word-break:break-all;
 }
 
 #greeting-index{
@@ -40,4 +40,8 @@ background-index:  rgba(255, 255, 255, 0.62)
 
 .display-index {
   display: flex;
+}
+
+.symptom-input h1, h2, h3, p {
+  color: black;
 }
