@@ -1,8 +1,8 @@
 <div class="background-index">
   <div class="index-container">
-    <div id="card-show" class=" col-6 half-index">
+    <div class=" col-6 half-index">
       <div id="advices-show">
-        <h1> Thank you for trusting me with your feelings</h1>
+        <h1 class="title-highlight title-color"> Thank you for trusting me with your feelings</h1>
         <br>
         <p>It looks like you are pretty angry today. Maybe you should lie down for a minute to reconnect with yourself, maybe a little of meditation etc etc etc .
         Below you would find some article that I think you would enjoy</p>
@@ -14,7 +14,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= advice.link.title %></h5>
           <p class="card-text">Category: <%= advice.link.category %></p>
-          <a href="<%= advice.link.url %>" class="btn btn-primary" target="_blank">Read more</a>
+          <a href="<%= advice.link.url %>" class="btn btn-primary btn-color-advices" target="_blank">Read more</a>
         </div>
       </div>
       <% end %>
