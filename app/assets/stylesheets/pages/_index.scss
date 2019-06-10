@@ -2,10 +2,13 @@
 @import "home";
 
 .background-index{
+ // background: url(https://bourbon.britcdn.com/assets/bg-pattern-pink.svg),rgba(242, 124, 73, 0.33);
   background-image: asset-url('back.jpg');
+  background-color: rgba(255, 0, 0, 0.4);
   background-size: 100%;
   min-height: 130vh;
   color: black;
+  // background-image:linear-gradient(white, rgba(242, 124, 73, 0.33));
 
   .index-container {
     display: flex;
@@ -44,4 +47,9 @@ background-index:  rgba(255, 255, 255, 0.62)
 
 .symptom-input h1, h2, h3, p {
   color: black;
+}
+
+#user-input{
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+background-color: rgba(255, 255, 255, 0.62);
 }
