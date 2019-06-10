@@ -33,14 +33,15 @@
   align-items: center;
 }
 
-.container-banner {
-  color: white;
-}
+// .container-banner {
+//   color: white;
+// }
 
 .container-banner h1 {
   font-size: 6rem;
   font-family: 'Roboto', sans-serif;
   text-shadow: 2px 2px 0px $orange-underline;
+  color: white;
 }
 
 .container-banner h3 {
@@ -60,6 +61,7 @@
 #btn-color {
   background-color: #5B8E7D;
   border-color: #5B8E7D;
+  margin-bottom: 1em;
 }
 
 #link-color {
@@ -88,9 +90,9 @@
 }
 
 // this is setting a line under the "learn more about ... period" but we need to see if it's addinf value or not
-// #text-highlight {
-//   background: linear-gradient(180deg,rgba(255,255,255,0) 90%, $orange-underline 20%);
-// }
+#text-highlight {
+  background: linear-gradient(180deg,rgba(255,255,255,0) 90%, $orange-underline 20%);
+}
 
 #title-color {
   color: #5B8E7D;
