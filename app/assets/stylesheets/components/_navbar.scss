@@ -10,11 +10,12 @@
 }
 #navbar-space{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  max-width: 100px;
+  margin: 0 11rem;
 }
 .nav-item{
 
@@ -26,21 +27,23 @@ letter-spacing: .08334rem;
 text-transform: uppercase;
 list-style-type: none;
 text-decoration: none;
-
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 4px 4px;
-  color: #000;
-  text-decoration: none;
-  transition: background-size .2s;
+background-position: 0 100%;
+background-repeat: repeat-x;
+background-size: 4px 4px;
+color: #000;
+text-decoration: none;
+transition: background-size .2s;
 }
 
 .nav-item:hover{
   transition: 0.3s;
   font-size: 20.5px;
   color: #f3ba9c;
-   background-size: 4px 50px;
+  background-size: 4px 50px;
 
 }
 
 
+#navbar-link-display {
+  margin-top: 20px;
+}
