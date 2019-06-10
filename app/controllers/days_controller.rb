@@ -24,7 +24,8 @@ class DaysController < ApplicationController
     authorize @day
     @day.user = current_user
     if @day.save!
-      AdvicesCombinator.new(@day) # private method below
+      AdvicesCombinator.new(@day)
+      SentimentAnalyser.new.call(@text)
       redirect_to day_path(@day)
     else
       render :new
@@ -66,6 +67,6 @@ class DaysController < ApplicationController
   end
 
   def day_params
-    params.require(:day).permit(:bleeding, :bad_mood, :head_pain, :abdominal_pain, :breast_pain, :date, :user_id)
+    params.require(:day).permit(:bleeding, :bad_mood, :head_pain, :abdominal_pain, :breast_pain, :date, :user_id, :emotion)
   end
 end
