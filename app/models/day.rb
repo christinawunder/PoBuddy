@@ -1,6 +1,6 @@
 class Day < ApplicationRecord
   belongs_to :user
-  has_many :advices
+  has_many :advices, dependent: :destroy
   has_many :links, through: :advices
 
   def pain?

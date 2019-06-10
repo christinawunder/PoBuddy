@@ -1,5 +1,4 @@
 class SentimentAnalyser
-
   def initializer
     set_client
   end
@@ -16,30 +15,34 @@ class SentimentAnalyser
   attr_reader :client, :result, :text
 
   def perform_request
-    @result = {
-      "document_tone": {
-        "tones": [
-          {
-            "score": 0.6165,
-            "tone_id": "sadness",
-            "tone_name": "Sadness"
-          },
-          {
-            "score": 0.829888,
-            "tone_id": "analytical",
-            "tone_name": "Analytical"
-          }
-        ]
-      }
-    }
-    # @result = client.tone(
-    #   tone_input: { text: text },
-    #   content_type: "application/json"
-    # )
+    @result = client.tone(
+      tone_input: { text: text },
+      content_type: "application/json"
+    )
+    # @result = {
+    #   "document_tone": {
+    #     "tones": [
+    #       {
+    #         "score": 0.6165,
+    #         "tone_id": "sadness",
+    #         "tone_name": "Sadness"
+    #       },
+    #       {
+    #         "score": 0.829888,
+    #         "tone_id": "analytical",
+    #         "tone_name": "Analytical"
+    #       }
+    #     ]
+    #   }
+    # }
   end
+# curl -X POST -u "apikey:B4B2kwcx3icc5ehW_Avql-104zj2E28JqKwJ7QFeP1IF" \
+# --header "Content-Type: application/json" \
+# --data-binary @tone_test.json \
+# "https://gateway-fra.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21"
 
   def evaluate_result
-
+    #
   end
 
   def expose_result
@@ -55,10 +58,10 @@ class SentimentAnalyser
   end
 
   def api_key
-    # COMES FROM YOUR SECRETS (ON Monday)
+    ENV['IBM_API']
   end
 
   def url
-    # COMES ON Monday
+    'https://gateway-fra.watsonplatform.net/tone-analyzer/api'
   end
 end
