@@ -66,6 +66,10 @@
   margin-bottom: 11vh;
 }
 
+.card-title-underline {
+  background: linear-gradient(180deg,rgba(255,255,255,0) 90%, $link-green 20%);
+}
+
 .subtitle-display {
 text-align: center;
 }
@@ -81,9 +85,7 @@ text-align: center;
 }
 
 .background-image-template {
-//   // background-image: asset-url('sea-v3.png');
-//   // background-color: rgba(255, 255, 255, 0.3);
-//   background-blend-mode: lighten;
+  background-color: white;
 }
 
 .background-image-features {
