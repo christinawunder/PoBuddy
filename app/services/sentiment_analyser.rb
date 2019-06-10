@@ -5,23 +5,26 @@ class SentimentAnalyser
 
   def call(text)
     @text = text
-    perform_request
+    perform_request if @text != ""
   end
 
   private
 
   attr_reader :client, :result, :text
 
-  # def create_emotion_advice
-  #  if @result
-  # end
-
   def perform_request
-    @result = client.tone(
+    tone = client.tone(
       tone_input: { text: @text },
       content_type: "application/json"
     )
-    return @result.result["document_tone"]["tones"][0]["tone_id"]
+
+    result = JSON.pretty_generate(tone.result)
+    analysis = JSON.parse(result)
+
+    return analysis["document_tone"]["tones"].map do |t|
+      t["tone_id"]
+    end
+  #  return @result.result["document_tone"]["tones"][0]["tone_id"]
   end
 # curl -X POST -u "apikey:B4B2kwcx3icc5ehW_Avql-104zj2E28JqKwJ7QFeP1IF" \
 # --header "Content-Type: application/json" \
