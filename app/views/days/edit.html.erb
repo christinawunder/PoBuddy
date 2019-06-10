@@ -1,19 +1,31 @@
-<%= simple_form_for @day do |f| %>
-  <%= f.label :bleeding %>
-  <%= f.collection_radio_buttons :bleeding, @radio_collection, :first, :last %>
-  <br>
-  <%= f.label :bad_mood %>
-  <%= f.collection_radio_buttons :bad_mood, @radio_collection, :first, :last %>
-  <br>
-  <%= f.label :head_pain %>
-  <%= f.collection_radio_buttons :head_pain, @radio_collection, :first, :last %>
-  <br>
-  <%= f.label :abdominal_pain %>
-  <%= f.collection_radio_buttons :abdominal_pain, @radio_collection, :first, :last %>
-  <br>
-  <%= f.label :breast_pain %>
-  <%= f.collection_radio_buttons :breast_pain, @radio_collection, :first, :last %>
-  <br>
-  <%= f.label :Edit! %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
-<% end %>
+<div class="background-index">
+  <div class="index-container">
+    <div id="card-show" class=" col-6 half-index">
+  <h1 .top >Here are some recommendations for you today</h1>
+        </div>
+      </div>
+       <%= simple_form_for @day do |f| %>
+        <%= f.label :bleeding %>
+        <%= f.collection_radio_buttons :bleeding, @radio_collection, :first, :last %>
+        <br>
+        <%= f.label :bad_mood %>
+        <%= f.collection_radio_buttons :bad_mood, @radio_collection, :first, :last %>
+        <br>
+        <%= f.label :head_pain %>
+        <%= f.collection_radio_buttons :head_pain, @radio_collection, :first, :last %>
+        <br>
+        <%= f.label :abdominal_pain %>
+        <%= f.collection_radio_buttons :abdominal_pain, @radio_collection, :first, :last %>
+        <br>
+        <%= f.label :breast_pain %>
+        <%= f.collection_radio_buttons :breast_pain, @radio_collection, :first, :last %>
+        <br>
+        <%= f.label :Let_us_know! %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+
+    <div id= "" class=" col-4 half-index">
+    </div>
+  </div>
+</div>

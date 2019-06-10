@@ -18,17 +18,18 @@ td.passed-days {
   padding: 0px;
   vertical-align: middle;
   margin: 0;
+  height: 60px;
 }
 td.not-month {
   background-color: #5b8e7d;
   padding: 0px;
   vertical-align: middle;
+  height: 60px;
 }
 td {
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
   justify-content: center;
-  height: 70px;
   vertical-align: middle;
 }
 td:hover {
@@ -41,13 +42,12 @@ td.today {
   border-width: 2px;
   border-radius: 4px;
   padding: 0px;
-  height: 70px;
   vertical-align: middle;
 }
 td.upcoming-days {
   padding: 0px;
-  height: 70px;
   vertical-align: middle;
+  height: 60px;
 }
 
 tr > th {
