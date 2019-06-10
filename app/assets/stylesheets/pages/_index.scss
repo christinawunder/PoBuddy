@@ -1,37 +1,31 @@
 // Import page-specific CSS files here.
-@import "home";
 
 .background-index{
-  background-image: asset-url('back.jpg');
-  background-size: 100%;
-  min-height: 130vh;
-  color: black;
+ // background: url(https://bourbon.britcdn.com/assets/bg-pattern-pink.svg),rgba(242, 124, 73, 0.33);
+ background: url(https://bourbon.britcdn.com/assets/bg-pattern-peach.svg),#fff8f1;
+ // background-image: asset-url('back.jpg');
+ // background-color: rgba(255, 0, 0, 0.4);
+ background-size: 100%;
+ min-height: 130vh;
+ color: black;
+ // background-image:linear-gradient(white, rgba(242, 124, 73, 0.33));
 
   .index-container {
-    display: flex;
-    justify-content: space-evenly;
+   display: flex;
+   justify-content: space-evenly;
   }
 }
 
 .half-index {
   margin: 70px;
   padding-top: 20px;
-  word-break: break-all;
   display: flex;
   flex-wrap: wrap;
-  // background-color: rgba(255, 255, 255, 0.62);
-
   .card {
     width: 46%;
     margin-right: 1rem;
     margin-top: 1rem;
   }
-}
-
-#calendar-index{
-  display:flex;
-  flex-direction: column;
-word-break:break-all;
 }
 
 #greeting-index{
@@ -44,4 +38,18 @@ background-index:  rgba(255, 255, 255, 0.62)
 
 .symptom-input h1, h2, h3, p {
   color: black;
+}
+
+#user-input{
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+background-color: rgba(255, 255, 255, 0.62);
+}
+
+#symptom-input{
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+background-color: rgba(255, 255, 255, 0.62);
+margin-top: inherit;
+width: inherit;
+padding: inherit;
+
 }
