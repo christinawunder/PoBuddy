@@ -3,13 +3,13 @@
     <div class="row" id="row-banner">
       <div class="col-sm-12 col-md-6 title-padding">
         <h1>Pobuddy</h1>
-        <h3> <em>A free period tracker!</em></h3>
+        <h3>A free period tracker!</h3>
         <br>
         <a href="#redirect-to-features" class="button">Discover now</a>
       </div>
 
       <div class="sign-form col-sm-12 col-md-6">
-        <h2>Log in</h2>
+        <h2 id="title-color">Log in</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
@@ -36,7 +36,7 @@
   <div class="background-image-template">
     <div id="redirect-to-features" class="background-image-features">
       <div class="subtitle-display margin-bottom">
-        <h2><em>Learn more about your body on our website, with articles about period:</em></h2>
+        <h2><em id="text-highlight">Learn more about your body on our website, with articles about period:</em></h2>
         <div class="cards-display">
           <div class="card-trip">
               <%= image_tag "speak-bubble-green.png", alt: "alttext" %>
