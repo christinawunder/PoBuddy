@@ -1,7 +1,13 @@
 <div class="background-index">
   <div class="index-container">
     <div id="card-show" class=" col-6 half-index">
-  <h1 .top >Here are some recommendations for you today</h1>
+      <div id="advices-show">
+        <h1> Thank you for trusting me with your feelings</h1>
+        <br>
+        <p>It looks like you are pretty angry today. Maybe you should lie down for a minute to reconnect with yourself, maybe a little of meditation etc etc etc .
+        Below you would find some article that I think you would enjoy</p>
+      </div>
+<!--   <h1 .top >Here are some recommendations for you today</h1> -->
       <% @advices.each do |advice| %>
       <div class="card">
         <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
