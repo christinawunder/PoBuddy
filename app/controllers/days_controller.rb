@@ -21,6 +21,11 @@ class DaysController < ApplicationController
     @day = Day.new(day_params)
     @day.user = current_user
     @day.date = Date.today
+    ((Date.today - 30) .. Date.today).each do |date|
+      unless current_user.days.map(&:date).include?(date)
+        current_user.days << Day.create!(date: date, user: current_user)
+      end
+    end
     authorize @day
     @day.user = current_user
     if @day.save!
@@ -44,6 +49,7 @@ class DaysController < ApplicationController
   end
 
   def edit
+    @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
     authorize @day
   end
 
@@ -51,6 +57,7 @@ class DaysController < ApplicationController
     @day.update(day_params)
     @day.save!
     authorize @day
+    redirect_to day_path(@day)
   end
 
   def destroy

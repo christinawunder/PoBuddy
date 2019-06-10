@@ -18,30 +18,25 @@
         <%= date.day %>
         <% if @day_by_date[date] %>
           <% @day_by_date[date].each do |day| %>
-            <%= link_to "+", day_path(day) %>
-          <% if day.pain? %>
-          <br>
-            <i class="fas fa-bolt"></i>
-          <% end %>
-          <% if day.bad_mood %>
-            <i class="fas fa-frown"></i>
-          <% end %>
-          <br>
+            <% if current_user.days.where(date: day.date) && current_user.days.where(date: day.date)[0].bleeding %>
+              <%= link_to "+", day_path(day) %>
+            <% else %>
+              <%= link_to "=", edit_day_path(current_user.days.find_by(date: day.date)) %>
+            <% end %>
+            <% if day.pain? %>
+            <br>
+              <i class="fas fa-bolt"></i>
+            <% end %>
+            <% if day.bad_mood %>
+              <i class="fas fa-frown"></i>
+            <% end %>
+            <br>
           <% end %>
         <% end %>
       <% end %>
     </div>
   </div>
-<!--   <div id="woof-woof">
-      <ul>Date: <%= @day.date %>
-        <li>Breast Pain: <%= @day.breast_pain %></li>
-        <li>Head Pain: <%= @day.head_pain %></li>
-        <li>Abdominal Pain: <%= @day.abdominal_pain %></li>
-        <li>Bleeding: <%= @day.bleeding %></li>
-        <li>Bad Mood: <%= @day.bad_mood %></li>
-      </ul>
-  </div> -->
-   <br>
+  <br>
   <div id="symptom-input">
     <%= render 'new' %>
   </div>
