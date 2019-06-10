@@ -46,7 +46,7 @@ class Calendar < Struct.new(:view, :date, :callback, :personal_days)
       end
     end
 
-    classes << "today" if day == Date.today
+    classes << "selected" if day == date
     classes << "not-month" if day.month != date.month
     classes << "passed-days" if (day < Date.today) && (day.month == date.month)
     classes << "upcoming-days" if (day > Date.today) && (day.month == date.month)

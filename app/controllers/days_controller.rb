@@ -1,5 +1,5 @@
 class DaysController < ApplicationController
-  before_action :find_day, only: [:show, :edit, :update]
+  before_action :find_day, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: :about
 
   def index
@@ -7,13 +7,14 @@ class DaysController < ApplicationController
     @day_by_date = @days.group_by(&:date)
 
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
-
-    @day = Day.new(date: @date)
+    # @day = current_user.days.find_by(date: @date)
+    # @day ||= Day.new(date: @date)
+    @day = Day.new
     @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
   def new
-    @day = Day.new
+    @day = Day.new(user: current_user, date: params[:date])
     authorize @day
   end
 
@@ -32,14 +33,12 @@ class DaysController < ApplicationController
   end
 
   def show
-    authorize @day
     @advices = @day.advices
     @days = policy_scope(Day).where(user: current_user)
     @day_by_date = @days.group_by(&:date)
 
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
-    @day = Day.new(date: @date)
     @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
@@ -55,7 +54,7 @@ class DaysController < ApplicationController
 
   def destroy
     @day.destroy
-    authorize @day
+    redirect_to root_path
   end
 
   private

@@ -9,6 +9,10 @@ class DayPolicy < ApplicationPolicy
     owner_or_admin?
   end
 
+  def new?
+    owner_or_admin?
+  end
+
   def create?
     owner_or_admin?
   end
