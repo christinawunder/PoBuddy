@@ -41,15 +41,38 @@ background-index:  rgba(255, 255, 255, 0.62)
 }
 
 #user-input{
-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-background-color: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.62);
+  border: 0;
+
+}
+
+#user-input:focus {
+  outline: none;
+  border: 1px solid #5B8E7D;
 }
 
 #symptom-input{
-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-background-color: rgba(255, 255, 255, 0.62);
-margin-top: inherit;
-width: inherit;
-padding: inherit;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.62);
+  margin-top: inherit;
+  width: inherit;
+  padding: inherit;
 
+  h3 {
+    color: #5B8E7D;
+  }
+
+}
+
+#btn-color-green{
+  background-color: #5B8E7D;
+  border: green;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+}
+
+.title-highlight {
+  background: linear-gradient(180deg,rgba(255,255,255,0) 94%, $orange-underline 20%);
+  margin-bottom: 1em;
 }
