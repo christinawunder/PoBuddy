@@ -5,11 +5,14 @@
     <br>
     <h2>How was your day ?</h2>
     <br>
-    <h2>Please check the box ✔️ under the calendar and let us know how you feel 🙃. We will provide you yith the best content of internet 👌 !</h2>
+    <h2>Please check the box ✔️ under the calendar and let me know how you feel 🙃. I will provide you yith the best content of internet 👌 !</h2>
     <br>
-    <h3>psssssst , on monday you would be able to write down directly your feelings ⌨️. We will provide you even more adapted content and advices ❤️</h3>
+    <textarea id="user-input" placeholder="Tell me about your day here" cols="75" rows="20"></textarea>
+    <div id="symptom-input">
+    <%= render 'new' %>
+    </div>
   </div>
-  <div id= "calendar-index" class="col-6 half-index">
+  <div id= "calendar-index" class="col-6 row-3 half-index ">
     <%= render 'days/calendar' %>
   </div>
 </div>
