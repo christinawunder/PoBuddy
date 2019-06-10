@@ -1,0 +1,20 @@
+.mdl-slider {
+    color: #5B8E7D !important;
+    &:active::-webkit-slider-thumb,
+    &::-webkit-slider-thumb {
+        background: #5B8E7D !important;
+    }
+
+    &:active::-moz-range-thumb,
+    &::-moz-range-thumb {
+        background: #5B8E7D !important;
+    }
+
+    &:active::-ms-thumb,
+    &::-ms-thumb {
+        background: #5B8E7D !important;
+    }
+}
+.mdl-slider__container .mdl-slider__background-flex .mdl-slider__background-lower{
+  background: #5B8E7D !important;
+}
