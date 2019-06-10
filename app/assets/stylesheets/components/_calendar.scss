@@ -20,7 +20,7 @@ td.passed-days {
   vertical-align: middle;
 }
 td.not-month {
-  background-color: #5b8e7d;
+   background-color: antiquewhite;
   padding: 0px;
   vertical-align: middle;
 }
@@ -53,10 +53,7 @@ td.upcoming-days {
 tr > th {
   text-align:center;
   font-family: 'Arial', sans-serif;
-  border-bottom-style: ridge;
-  border-bottom-color: #5b8e7d;
-  border-bottom-width: 2px;
-  background-color: #c57b57;
+  background-color:whitesmoke;
   font-size: 12px;
   font-style: underline;
   height: 30px;
@@ -69,17 +66,10 @@ tr {
 }
 
 .well {
-  border-bottom-style: ridge;
-  border-bottom-color: #5b8e7d;
-  border-bottom-width: 2px;
-  background-color: pink;
+  background-color: #ffe8d9;
 }
 
 #calendar {
-  border-style: ridge;
-  border-radius: 5px;
-  border-width: 2px;
-  border-color: #5b8e7d;
   margin-bottom: 10px;
   margin-left: 0;
   margin-right: 0;
@@ -98,10 +88,4 @@ tr {
 #calendar-content-days {
   padding: 0;
   justify-content: center;
-}
-.table {
-  margin-bottom: 0px;
-  border-bottom-style: solid;
-  border-bottom-color: #5b8e7d;
-  border-bottom-width: 2px;
 }
