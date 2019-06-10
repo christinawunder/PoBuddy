@@ -1,13 +1,13 @@
-<div id="calendar" class="col-md-10">
+<div id="calendar" class="col-md-12">
   <div class="row">
     <div class="col-md-12 text-center" id="month-indicator">
       <div class="well controls">
         <%= link_to root_path(date: @date - 1.month), class: "btn btn-default" do %>
-          <i class="glyphicon glyphicon-backward"></i>
+          <i class="fas fa-chevron-circle-left"></i>
         <% end %>
         <%= "#{@date.strftime("%B")} #{@date.year}" %>
         <%= link_to  root_path(date: @date + 1.month), class: "btn btn-default" do %>
-          <i class="glyphicon glyphicon-forward"></i>
+          <i class="fas fa-chevron-circle-right"></i>
         <% end %>
       </div>
     </div>
@@ -15,24 +15,30 @@
   <div class="row">
     <div class="col-md-12 text-center" id="calendar-content-days">
       <%= calendar @date, @day_by_date do |date| %>
-        <%= date.day %>
+
         <% if @day_by_date[date] %>
+
           <% @day_by_date[date].each do |day| %>
-            <%= link_to "+", day_path(day) %>
-          <% if day.pain? %>
-          <br>
-            <i class="fas fa-bolt"></i>
+            <%= link_to date.day, day_path(day, date: date) %>
+            <% if day.pain? %>
+              <br>
+              <i class="fas fa-bolt"></i>
+            <% end %>
+            <% if day.bad_mood %>
+              <i class="fas fa-frown"></i>
+            <% end %>
+            <br>
           <% end %>
-          <% if day.bad_mood %>
-            <i class="fas fa-frown"></i>
-          <% end %>
-          <br>
+        <% else %>
+          <%= link_to root_path(date: date), class: "new-day-link" do %>
+          <%= date.day %>
           <% end %>
         <% end %>
       <% end %>
     </div>
   </div>
-<!--   <div id="woof-woof">
+  <div id="woof-woof">
+    <% if @day.valid? %>
       <ul>Date: <%= @day.date %>
         <li>Breast Pain: <%= @day.breast_pain %></li>
         <li>Head Pain: <%= @day.head_pain %></li>
@@ -40,6 +46,8 @@
         <li>Bleeding: <%= @day.bleeding %></li>
         <li>Bad Mood: <%= @day.bad_mood %></li>
       </ul>
-  </div> -->
+      <span><%= link_to "Delete data for this day", day_path(@day), method: :delete %></span>
+    <% end %>
+  </div>
    <br>
 </div>

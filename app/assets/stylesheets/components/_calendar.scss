@@ -16,7 +16,7 @@
 
 td.passed-days {
   padding: 0px;
-  height: 70px;
+  height: 90px  ;
   vertical-align: middle;
 }
 td.not-month {
@@ -28,28 +28,31 @@ td {
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
   justify-content: center;
-  height: 70px;
+  height: 90px  ;
   vertical-align: middle;
 }
 td:hover {
   background-color: lightgrey;
   vertical-align: middle;
 }
-td.today {
+td.selected {
   border-color: #c57b57;
   border-style: solid;
   border-width: 2px;
   border-radius: 4px;
   padding: 0px;
-  height: 70px;
+  height: 90px  ;
   vertical-align: middle;
 }
 td.upcoming-days {
   padding: 0px;
-  height: 70px;
+  height: 90px  ;
   vertical-align: middle;
 }
-
+td > a {
+  width: 100%;
+  height: 100%;
+}
 tr > th {
   text-align:center;
   font-family: 'Arial', sans-serif;
@@ -73,7 +76,7 @@ tr {
   margin-bottom: 10px;
   margin-left: 0;
   margin-right: 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.62);
   max-height: max-content;
 }
