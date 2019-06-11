@@ -16,7 +16,7 @@
 
 td.passed-days {
   padding: 0px;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
 }
 td.not-month {
@@ -28,7 +28,7 @@ td {
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
   justify-content: center;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
 }
 td:hover {
@@ -41,12 +41,12 @@ td.selected {
   border-width: 2px;
   border-radius: 4px;
   padding: 0px;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
 }
 td.today {
   padding: 0px;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
   border-style: ridge;
   border-color: green;
@@ -69,6 +69,7 @@ tr > th {
   font-style: underline;
   height: 30px;
   vertical-align: middle;
+  width: 95px;
 }
 
 tr {
@@ -112,7 +113,4 @@ tr {
 .row {
   margin-left: 0px;
   margin-right: 0px;
-}
-#calendar-index {
-  padding: 0px;
 }
