@@ -1,22 +1,22 @@
-<h3 class="title-highlight">Tell us how you feel today</h3>
-
+<h3 class="title-highlight">Tell me how you are feeling today</h3>
 <%= simple_form_for @day do |f| %>
+
   <%= f.input :usertext, as: :text %>
 
-  <%= range_field(:day, :bleeding, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <%= f.label :bleeding %>
+  <%= range_field(:day, :bleeding, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <br>
-  <%= range_field(:day, :bad_mood, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <%= f.label :bad_mood %>
+  <%= range_field(:day, :bad_mood, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <br>
-  <%= range_field(:day, :head_pain, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <%= f.label :head_pain %>
+  <%= range_field(:day, :head_pain, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <br>
-  <%= range_field(:day, :abdominal_pain, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <%= f.label :abdominal_pain %>
+  <%= range_field(:day, :abdominal_pain, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <br>
-  <%= range_field(:day, :breast_pain, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <%= f.label :breast_pain %>
+  <%= range_field(:day, :breast_pain, in: 0..5, value: 0, class: "mdl-slider mdl-js-slider is-upgraded") %>
   <br>
   <%= f.input :date, as: :hidden, input_html: {value: params[:date]} %>
   <%= f.button :submit, "Let us know" ,class: 'btn btn-primary', id:"btn-color-green" %>
