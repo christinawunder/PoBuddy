@@ -15,9 +15,13 @@
         <li>Sleep (a lake of rest influe on your nerves.  Turn off your phone, lie down and take a nap !)</li>
         </ul>
     </div>
+    <div class=“arrow-down bounce explanation-arrow”>
+    <a href="#card" id="down-arrow"><i class="fas fa-chevron-down" > </i>
+    </a>
+  </div>
 
-    <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><i class="far fa-arrow-alt-circle-down"></i></a>
 
+<a name="card"></a>
     <h3 class="show-title">Here are some articles that may interest you</h3>
     <div class="card-wrap ">
     <% @advices.each do |advice| %>
@@ -31,9 +35,12 @@
       </div>
     <% end %>
    </div>
+    <div class=“arrow-down bounce explanation-arrow”>
+    <a href="#calendar" id="down-arrow"><i class="fas fa-chevron-down" > </i>
+    </a>
+  </div>
 
-<a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><i class="far fa-arrow-alt-circle-down"></i></a>
-
+      <a name="calendar"></a>
     <h3 class="show-title">Your calendar</h3>
     <div id= "calendar-show" class="col-6">
       <%= render 'days/calendar' %>
@@ -49,8 +56,3 @@
     </div>
   </div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="scroll-down.js"></script>
