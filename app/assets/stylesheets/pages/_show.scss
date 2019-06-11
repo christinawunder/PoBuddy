@@ -40,6 +40,7 @@ padding: 34px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 display: block;
 margin-top: auto;
+margin-bottom: 36px;
   h3 {
     color: #5B8E7D;
     padding-bottom: inherit;
@@ -92,4 +93,18 @@ margin-top: auto;
     border: green;
     margin-bottom: 1.5em;
     margin-top: 1em;
+}
+
+
+
+.separator-type, .title-type, .intro-type, .content-type .intro-type p {
+  position: relative;
+}
+.intro-type .container {
+  padding: 107px 0px 102px 0px !important;
+}
+.company-heading h1 {
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  line-height: 80px;
 }
