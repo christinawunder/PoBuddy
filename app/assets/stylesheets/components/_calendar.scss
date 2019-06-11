@@ -16,7 +16,7 @@
 
 td.passed-days {
   padding: 0px;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
 }
 td.not-month {
@@ -28,7 +28,7 @@ td {
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
   justify-content: center;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
 }
 td:hover {
@@ -41,8 +41,16 @@ td.selected {
   border-width: 2px;
   border-radius: 4px;
   padding: 0px;
-  height: 90px  ;
+  height: 90px;
   vertical-align: middle;
+}
+td.today {
+  padding: 0px;
+  height: 90px;
+  vertical-align: middle;
+  border-style: ridge;
+  border-color: green;
+  border-width: 3px;
 }
 td.upcoming-days {
   padding: 0px;
@@ -61,6 +69,7 @@ tr > th {
   font-style: underline;
   height: 30px;
   vertical-align: middle;
+  width: 95px;
 }
 
 tr {
@@ -76,7 +85,7 @@ tr {
   margin-bottom: 10px;
   margin-left: 0;
   margin-right: 0;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.62);
   max-height: max-content;
 }
@@ -93,3 +102,21 @@ tr {
   padding: 0;
   justify-content: center;
 }
+
+#woof-woof {
+  padding-top: 4%;
+}
+
+#date-color {
+  color: #5B8E7D;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+// .fa-thunderstorm {
+//   font-color: orange;
+// }
+// .fa-fire {
+//   font-color: orange;
+// }
