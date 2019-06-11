@@ -43,7 +43,8 @@
       <% end %>
     </div>
   </div>
-  <div id="woof-woof">
+
+    <div id="woof-woof">
     <% if @day.valid? %>
       <ul>Date: <strong><%= @day.date %></strong><br> <em>Here's what happened:</em>
         <li>Breast Pain: <%= @day.breast_pain %></li>
@@ -54,6 +55,4 @@
       </ul>
       <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
     <% end %>
-  </div>
-   <br>
 </div>
