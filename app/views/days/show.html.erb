@@ -1,19 +1,8 @@
 <div class="background-index">
   <div id="advices-show" class=" container-show">
-    <h3 class="show-title"> Thank you for trusting me with your feelings!</h3>
+    <h3 class="show-title"> Thank you for your trust in Pobuddy</h3>
     <div id="emotion-advice">
-      <h3 class="title-highlight">Well, I can feel that you are angry today.Here you can find some advices to deal with your anger :</h3>
-      <ul>
-        <li>Blow some steam with physical exercise ! (Runing, jumping, dancing.. anything that feels good !)</li>
-        <br>
-        <li>Take a time out. (it’s the occasion to reconnect with yourself, maybe with a little bit of meditation)</li>
-        <br>
-        <li>Take deep breaths.Your heart rate is increases, your muscles tense up.Deep breathing is one of the best ways to relax when in a tense moment.</li>
-        <br>
-        <li>Identify possible solutions. (instead of focusing on what made yu mad, work on resolving the issue at hand)</li>
-        <br>
-        <li>Sleep (a lake of rest influe on your nerves.  Turn off your phone, lie down and take a nap !)</li>
-        </ul>
+      <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
     </div>
 
     <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><i class="fas fa-arrow-circle-down"></i></a>
