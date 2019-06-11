@@ -3,4 +3,24 @@
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  background-color: #5B8E7D;
+}
+
+.alert-info {
+  border-color: #5B8E7D;
+  color: #FEF8F1;
+}
+
+.alert-warning {
+  color: #FEF8F1;
+  border-color: #5B8E7D;
+}
+
+.close {
+  color: #FEF8F1;
+  text-shadow: 0 0 0 #FEF8F1;
+}
+
+.close:hover {
+  color: #D5865A;
 }
