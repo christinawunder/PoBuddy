@@ -44,6 +44,14 @@ td.selected {
   height: 90px  ;
   vertical-align: middle;
 }
+td.today {
+  padding: 0px;
+  height: 90px  ;
+  vertical-align: middle;
+  border-style: ridge;
+  border-color: green;
+  border-width: 3px;
+}
 td.upcoming-days {
   padding: 0px;
   height: 90px  ;
