@@ -20,6 +20,10 @@
   margin: 70px;
   text-shadow: 2px 2px 0px #d5875b;
   }
+  #down-arrow{
+  color:#5b8e7d;
+   font-size: 45px
+  }
 }
 .container-show{
   margin: 70px;
@@ -42,6 +46,7 @@ padding: 34px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 display: block;
 margin-top: auto;
+margin-bottom: 5px;
   h3 {
     color: #5B8E7D;
     padding-bottom: inherit;
@@ -56,7 +61,7 @@ margin-top: auto;
 .card-wrap{
   display: flex;
   margin-top: 7.125em;
-  margin-bottom:18.125em;
+  margin-bottom:12.125em;
   flex-wrap: wrap;
 }
 
@@ -95,3 +100,59 @@ margin-top: auto;
     margin-bottom: 1.5em;
     margin-top: 1em;
 }
+
+
+.bounce {
+-moz-animation: bounce 4s infinite;
+-webkit-animation: bounce 4s infinite;
+animation: bounce 4s infinite;
+}
+@-moz-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+}
+40% {
+  -moz-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+60% {
+  -moz-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+40% {
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+60% {
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+40% {
+  -moz-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+60% {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+}
+
