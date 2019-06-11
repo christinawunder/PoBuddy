@@ -1,20 +1,98 @@
-@import "index";
+// @import "index";
 
 
-#card-show{
 
+#advices-show{
+  text-align: center;
+  margin:19em;
+  margin-top:auto;
+  margin-bottom: 0;
+
+  .show-title {
+  font-size: 50px;
+  word-spacing: 1px;
+  line-height: 90px;
+  text-transform: none;
+  letter-spacing: 4px;
+  color: #181818;
+  text-align: center;
+  margin: 70px;
+  text-shadow: 2px 2px 0px #d5875b;
+  }
+  a{
+    background-color: antiquewhite;
+  }
+}
+.container-show{
+  margin: 70px;
+  padding-top: 20px;
+  flex-direction: row ;
+  flex-wrap: wrap;
+
+      .card-show {
+    width: 20%;
+    margin: 10px;
+  }
+}
+
+#emotion-advice{
+text-align: justify;
+margin: 10.625em;
+background: antiquewhite;
+padding: 34px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: block;
+margin-top: auto;
+  h3 {
+    color: #5B8E7D;
+    padding-bottom: inherit;
+    font-size: 30px
+  }
+
+  li {
+    font-size: 20px;
+  }
+}
+
+.card-wrap{
+  display: flex;
+  margin-top: 7.125em;
+  margin-bottom:18.125em;
+  flex-wrap: wrap;
+}
+
+.card-img-top {
+  height: 50%;
 }
 
 #calendar-show{
-  display:flex;
-  flex-direction: column;
+  display: flex;
 }
 
-.title-advice-display {
-  text-align: center;
-}
+#woof-woof{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.62);
+  width: 14em;
+  ul{
+    list-style-type: none;
+  }
 
-.top {
-  margin-top: 2rem;
+  p {
+    padding-left: 40px;
+    padding-right: 40px
+  }
+  h3 {
+    padding-left: 30px;
+    padding-right: 40px;
+    color: #5B8E7D;
+  }
 }
-
+.btn-delete{
+      background-color: #5B8E7D;
+    border: green;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+}
