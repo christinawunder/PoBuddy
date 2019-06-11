@@ -7,6 +7,7 @@
   margin:19em;
   margin-top:auto;
   margin-bottom: 0;
+  justify-content: center;
 
   .show-title {
   font-size: 50px;
@@ -27,8 +28,9 @@
 .container-show{
   margin: 70px;
   padding-top: 20px;
-  flex-direction: row ;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 
       .card-show {
     width: 20%;
@@ -69,12 +71,12 @@ margin-bottom: 5px;
 
 #calendar-show{
   display: flex;
+  justify-content: space-around;
 }
 
 #woof-woof{
   display: flex;
   flex-wrap: wrap;
-  margin-left: 200px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.62);
   width: 14em;
