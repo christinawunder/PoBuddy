@@ -2,17 +2,19 @@
   <a name="up"></a>
   <div id="advices-show" class=" container-show">
     <h3 class="show-title"> Thank you for your trust in Pobuddy</h3>
-    <div id="emotion-advice">
-      <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
-      <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
-      <%= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
-      <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
-      <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
-    </div>
-    <div class=“arrow-down bounce explanation-arrow”>
-     <a href="#card" id="down-arrow"><i class="fas fa-chevron-down" > </i>
-     </a>
-    </div>
+    <% if @day.emotion %>
+      <div id="emotion-advice">
+        <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
+        <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
+        <%= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
+        <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
+        <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
+      </div>
+      <div class=“arrow-down bounce explanation-arrow”>
+       <a href="#card" id="down-arrow"><i class="fas fa-chevron-down" > </i>
+       </a>
+      </div>
+    <% end %>
 
 
     <a name="card"></a>
