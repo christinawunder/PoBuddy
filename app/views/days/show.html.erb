@@ -1,4 +1,5 @@
 <div class="background-index">
+  <a name="up"></a>
   <div id="advices-show" class=" container-show">
     <h3 class="show-title"> Thank you for your trust in Pobuddy</h3>
     <div id="emotion-advice">
@@ -8,9 +9,13 @@
       <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
       <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
     </div>
+    <div class=“arrow-down bounce explanation-arrow”>
+     <a href="#card" id="down-arrow"><i class="fas fa-chevron-down" > </i>
+     </a>
+    </div>
 
-    <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><i class="fas fa-arrow-circle-down"></i></a>
 
+    <a name="card"></a>
     <h3 class="show-title">Here are some articles that may interest you</h3>
     <div class="card-wrap ">
     <% @advices.each do |advice| %>
@@ -24,20 +29,30 @@
       </div>
     <% end %>
    </div>
+    <div class=“arrow-down bounce explanation-arrow”>
+     <a href="#calendar" id="down-arrow"><i class="fas fa-chevron-down" > </i>
+     </a>
+    </div>
 
-
+    <a name="calendar"></a>
     <h3 class="show-title">Your calendar</h3>
-    <div id= "calendar-show" class="col-6">
+    <div id= "calendar-show" class="col-8 offset-2">
       <%= render 'days/calendar' %>
-      <div id="woof-woof">
+      <div id="woof-woof" class="col-3 offset-3">
        <% if @day.valid? %>
        <h3 class="title-highlight">Date: <%= @day.date %></h3>
-        <p>Breast Pain: <%= @day.breast_pain %></p>    <p>Head Pain: <%= @day.head_pain %></p>
+        <p>Breast Pain: <%= @day.breast_pain %></p>
+        <p>Head Pain: <%= @day.head_pain %></p>
         <p style="padding-left: 20px">Abdominal Pain: <%= @day.abdominal_pain %></p>
         <p>Bleeding: <%= @day.bleeding %></p>
         <p>Bad Mood: <%= @day.bad_mood %></p>
+        <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
         <% end %>
       </div>
+    </div>
+    <div class=“arrow-down bounce explanation-arrow”>
+     <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i>
+     </a>
     </div>
   </div>
 </div>

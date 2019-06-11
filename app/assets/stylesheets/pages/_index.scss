@@ -109,3 +109,15 @@ background-index:  rgba(255, 255, 255, 0.62)
     color: #5B8E7D;
     max-height: max-content;
 }
+.mascot {
+  background-image: asset-url("PobydyGif.gif");
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+}
+.welcome-title-width-100 {
+  width: 100%;
+}
