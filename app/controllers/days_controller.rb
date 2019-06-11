@@ -21,7 +21,7 @@ class DaysController < ApplicationController
   def create
     @day = Day.new(day_params)
     @day.user = current_user
-    @day.date = Date.today
+    @day.date ||= Date.today
     @text = @day.usertext
     authorize @day
     @day.user = current_user
