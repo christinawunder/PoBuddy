@@ -7,7 +7,7 @@
       <% end %>
     </ul>
   <% end %>
-  <%= f.input :usertext, as: :text %>
+  <%= f.input :usertext, as: :text, label: false %>
 
   <%= f.label :bleeding, label: "Bleeding: 0/5", id:"day_bleeding_label", name: "Bleeding"  %>
   <%= range_field(:day, :bleeding, in: 0..5, value: 0, class: "form-value-slider mdl-slider mdl-js-slider is-upgraded") %>
