@@ -31,18 +31,18 @@
       </div>
     <% end %>
    </div>
-
-
     <h3 class="show-title">Your calendar</h3>
-    <div id= "calendar-show" class="col-6">
+    <div id= "calendar-show" class="col-8 offset-2">
       <%= render 'days/calendar' %>
-      <div id="woof-woof">
+      <div id="woof-woof" class="col-3 offset-3">
        <% if @day.valid? %>
        <h3 class="title-highlight">Date: <%= @day.date %></h3>
-        <p>Breast Pain: <%= @day.breast_pain %></p>    <p>Head Pain: <%= @day.head_pain %></p>
+        <p>Breast Pain: <%= @day.breast_pain %></p>
+        <p>Head Pain: <%= @day.head_pain %></p>
         <p style="padding-left: 20px">Abdominal Pain: <%= @day.abdominal_pain %></p>
         <p>Bleeding: <%= @day.bleeding %></p>
         <p>Bad Mood: <%= @day.bad_mood %></p>
+        <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
         <% end %>
       </div>
     </div>
