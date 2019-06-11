@@ -20,11 +20,11 @@
 
           <% @day_by_date[date].each do |day| %>
             <%= link_to date.day, day_path(day, date: date) %>
-            <% if day.pain? %>
+            <% if (day.pain? != 0) %>
               <br>
               <i class="fas fa-bolt"></i>
             <% end %>
-            <% if day.bad_mood %>
+            <% if (day.bad_mood? != 0) %>
               <i class="fas fa-frown"></i>
             <% end %>
             <br>
