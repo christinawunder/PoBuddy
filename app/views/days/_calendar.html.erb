@@ -23,9 +23,15 @@
             <% if (day.pain? != 0) %>
               <br>
               <i class="fas fa-bolt"></i>
+            <%# elsif day.pain == 5%>
+            <!-- <br> -->
+              <!-- <i class="fas fa-thunderstorm"></i> -->
             <% end %>
-            <% if (day.bad_mood? != 0) %>
+            <% if (day.bad_mood != 0) %>
               <i class="fas fa-frown"></i>
+            <%# elsif day.bad_mood == 5 %>
+            <!-- <br> -->
+              <!-- <i class="fas fa-fire"></i> -->
             <% end %>
             <br>
           <% end %>
@@ -39,14 +45,14 @@
   </div>
   <div id="woof-woof">
     <% if @day.valid? %>
-      <ul>Date: <%= @day.date %>
+      <ul>Date: <strong><%= @day.date %></strong><br> <em>Here's what happened:</em>
         <li>Breast Pain: <%= @day.breast_pain %></li>
         <li>Head Pain: <%= @day.head_pain %></li>
         <li>Abdominal Pain: <%= @day.abdominal_pain %></li>
         <li>Bleeding: <%= @day.bleeding %></li>
         <li>Bad Mood: <%= @day.bad_mood %></li>
       </ul>
-      <span><%= link_to "Delete data for this day", day_path(@day), method: :delete %></span>
+      <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
     <% end %>
   </div>
    <br>
