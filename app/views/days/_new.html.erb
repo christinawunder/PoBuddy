@@ -1,6 +1,12 @@
-<h3 class="title-highlight">Tell us how you feel today</h3>
-
+<h3 class="title-highlight">Tell me how you are feeling today</h3>
 <%= simple_form_for @day do |f| %>
+  <% if @day.errors.any? %>
+    <ul>
+      <% @day.errors.full_messages.each do |message| %>
+        <li class="error-messages"><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <%= f.input :usertext, as: :text %>
 
   <%= f.label :bleeding, label: "Bleeding: 0/5", id:"day_bleeding_label", name: "Bleeding"  %>

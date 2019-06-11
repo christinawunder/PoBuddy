@@ -10,7 +10,6 @@ class DaysController < ApplicationController
     # @day = current_user.days.find_by(date: @date)
     # @day ||= Day.new(date: @date)
     @day = Day.new
-    @radio_collection = [['1 ', 1], ['2 ', 2], ['3 ', 3], ['4 ', 4], ['5 ', 5]]
   end
 
   def new
@@ -26,11 +25,14 @@ class DaysController < ApplicationController
     authorize @day
     @day.user = current_user
     @day.emotion = SentimentAnalyser.new.call(@text) if @text != ""
-    if @day.save!
+    if @day.save
       AdvicesCombinator.new(@day)
       redirect_to day_path(@day)
     else
-      render :new
+      @date = @day.date
+      @days = policy_scope(Day).where(user: current_user)
+      @day_by_date = @days.group_by(&:date)
+      render :index
     end
   end
 
