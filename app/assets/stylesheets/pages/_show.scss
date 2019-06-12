@@ -1,14 +1,6 @@
 // @import "index";
 
 
-
-#advices-show{
-  text-align: center;
-  margin:19em;
-  margin-top:auto;
-  margin-bottom: 0;
-  justify-content: center;
-
   .show-title {
   font-size: 50px;
   word-spacing: 1px;
@@ -17,38 +9,27 @@
   letter-spacing: 4px;
   color: #181818;
   text-align: center;
-  margin: 70px;
   text-shadow: 2px 2px 0px #d5875b;
-  }
-  #down-arrow{
-  color:#5b8e7d;
-   font-size: 45px
-  }
+    h3 {
+      padding-top: 70px;
+    }
 }
-.container-show{
-  margin: 70px;
-  padding-top: 20px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 
-      .card-show {
-    width: 20%;
-    margin: 10px;
-  }
+.padding-20 {
+  padding-bottom: 20px;
 }
 
 #emotion-advice{
 text-align: justify;
-margin: 10.625em;
 background: antiquewhite;
 padding: 34px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 display: block;
-margin-top: auto;
-margin-bottom: 5px;
+margin-top: 50px;
 min-width: 51vw;
 width: initial;
+min-height: 50px;
+height: initial;
   h3 {
     color: #5B8E7D;
     padding-bottom: 20px;
@@ -79,9 +60,13 @@ width: initial;
 #woof-woof{
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.62);
+  // background-color: rgba(255, 255, 255, 0.62);
+  background-color: #FEF8F1;
   width: 14em;
+  position: relative;
+
   ul{
     list-style-type: none;
   }
@@ -94,6 +79,10 @@ width: initial;
     padding-left: 30px;
     padding-right: 40px;
     color: #5B8E7D;
+  }
+
+  .title-highlight {
+    margin-bottom: 10px;
   }
 }
 .btn-delete{
@@ -160,4 +149,22 @@ animation: bounce 4s infinite;
 
 .title-display {
   justify-content: center;
+}
+
+.date-display {
+  text-align: center;
+  height: 50px;
+}
+
+.user-text-display {
+  padding-top: 20px;
+}
+
+.btn-display {
+  text-align: center;
+}
+
+
+.button-display {
+  margin-top: 10px;
 }
