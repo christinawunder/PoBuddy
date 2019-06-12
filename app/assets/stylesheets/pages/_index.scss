@@ -2,7 +2,7 @@
 @import "show";
 
 .background-index{
- background: url(https://bourbon.britcdn.com/assets/bg-pattern-peach.svg),#fff8f1;
+ background-color:#fff8f1;
  background-size: 100%;
  min-height: 130vh;
  color: black;
@@ -38,7 +38,7 @@
 background-index:  rgba(255, 255, 255, 0.62);
 
 p {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 34px;
 }
 }
@@ -48,7 +48,7 @@ p {
 }
 
 .symptom-input h1, h2, h3, p {
-  color: black;
+  color: #403E3D;
 }
 
 #user-input{
@@ -66,7 +66,7 @@ p {
 #symptom-input{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.62);
-  margin-top: inherit;
+  margin-top:4vh;
   width: inherit;
   padding: inherit;
 
@@ -109,6 +109,10 @@ background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20
 margin-bottom: 1em;
 }
 
+.welcome {
+  margin-top: 10vh
+}
+
 .title-color {
   color: #5B8E7D;
 }
@@ -126,8 +130,8 @@ margin-bottom: 1em;
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 .welcome-title-width-100 {
   width: 100%;
