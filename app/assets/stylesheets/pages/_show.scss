@@ -7,9 +7,8 @@
   line-height: 60px;
   text-transform: none;
   letter-spacing: 4px;
-  color: #181818;
+  color: #5B8E7D;
   text-align: center;
-  text-shadow: 2px 2px 0px #d5875b;
     h3 {
       padding-top: 70px;
     }
@@ -25,7 +24,6 @@ background: antiquewhite;
 padding: 34px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 display: block;
-margin-top: 50px;
 min-width: 51vw;
 width: initial;
 min-height: 50px;
@@ -163,4 +161,26 @@ animation: bounce 4s infinite;
 
 .button-display {
   margin-top: 10px;
+}
+
+.show-title-display {
+  h3 {
+  color: #5B8E7D;
+  // padding-bottom: 20px;
+  font-size: 30px;
+  }
+}
+
+.margin-title-calendar {
+  margin-bottom: 27px;
+  margin-top: 70px;
+}
+
+.padding-calendar-container {
+  padding-bottom: 50px;
+}
+
+.little-title-display {
+  height: 4px;
+  text-decoration-line: underline;
 }
