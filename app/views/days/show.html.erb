@@ -18,7 +18,7 @@
   </div>
 
   <div class="container">
-    <div class="show-title padding-20">
+    <div class="show-title show-title-display padding-20">
       <h3>Here are some articles that may interest you</h3>
     </div>
     <div class="row">
@@ -37,9 +37,9 @@
     </div>
   </div>
 
-    <div class="container">
-    <h3 class="show-title">Your calendar</h3>
-    <div class="row">
+  <div class="container">
+    <h3 class="show-title margin-title-calendar">Your calendar</h3>
+    <div class="row padding-calendar-container">
       <div id= "calendar-show" class="col-xs-12 col-md-8">
         <%= render 'days/calendar' %>
       </div>
@@ -48,7 +48,7 @@
         <div class="date-display title-highlight col-xs-12 col-md-12">
           <h3>Date: <%= @day.date %></h3>
         </div>
-        <div class="col-xs-12 col-md-12">
+        <div class="little-title-display col-xs-12 col-md-12">
           <h6>Here is what you entered:</h6>
         </div>
         <div class="symptom-display col-xs-12 col-md-6">
@@ -60,14 +60,14 @@
           <p>Bleeding: <%= @day.bleeding %></p>
           <p>Bad Mood: <%= @day.bad_mood %></p>
         </div>
-        <div class="col-xs-12 col-md-12">
+        <div class="little-title-display col-xs-12 col-md-12">
           <h6>Here is what you wrote:</h6>
         </div>
         <div class="user-text-background-color user-text-display col-xs-12 col-md-12">
           <p><%= @day.usertext %></p>
         </div>
         <div class="button-display">
-          <btn class="btn-display col-xs-12 col-md-12" id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
+          <btn class="btn-display col-xs-12 col-md-12" id="destroy-data"><%= link_to "Delete day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
         </div>
         <% end %>
       </div>
