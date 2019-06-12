@@ -22,4 +22,25 @@
 }
 .footer-links a:hover {
   opacity: 1;
+  color: #D67C48;
+}
+
+.heart-color {
+  color: black;
+  opacity: 0.85;
+}
+
+.heart-color:hover {
+  color: red;
+  opacity: 1;
+}
+
+.color-footer-sentence {
+  color: black;
+  opacity: 0.15;
+}
+
+.color-footer-sentence:hover {
+  color: black;
+  opacity: 1;
 }

@@ -11,8 +11,9 @@
   border: 2px solid #5B8E7D;
   background-color: white;
   border-radius: 5px;
-  opacity: 0.75;
-  max-height: 50vh;
+  opacity: 0.95;
+  min-height: 43vh;
+  height: initial;
   max-width: 40vw;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -84,7 +85,7 @@
 .button {
   font: bold 2rem Roboto;
   text-decoration: none;
-  background-color: #004a2f;
+  background-color: #D5875B;
   color: white;
   padding: 8px 15px;
 }
@@ -97,7 +98,10 @@
 
 // this is setting a line under the "learn more about ... period" but we need to see if it's addinf value or not
 #text-highlight {
-  background: linear-gradient(180deg,rgba(255,255,255,0) 90%, $orange-underline 20%);
+  background: linear-gradient(180deg,rgba(255,255,255,0) 97%, $orange-underline 20%);
+  width: 50%;
+  margin: 1px auto;
+  padding-bottom: 20px;
 }
 
 #title-color {
@@ -106,4 +110,5 @@
 
 #user_remember_me {
   box-shadow: none;
+  width: 36px;
 }

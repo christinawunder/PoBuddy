@@ -1,8 +1,10 @@
 <div class="background-index">
-  <a name="up"></a>
-  <div id="advices-show" class=" container-show">
-    <h3 class="show-title"> Thank you for your trust in Pobuddy</h3>
-    <% if @day.emotion.include?("anger" || "sadness" || "joy" || "fear" || "disgust") %>
+  <div class="container">
+    <div class="show-title">
+      <h3>Thank you for your trust in Pobuddy</h3>
+    </div>
+    <a name="up"></a>
+     <% if @day.emotion.include?("anger" || "sadness" || "joy" || "fear" || "disgust") %>
       <div id="emotion-advice">
         <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
         <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
@@ -11,40 +13,65 @@
         <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
       </div>
     <% end %>
-    <h3 class="show-title">Here are some articles that may interest you</h3>
-    <div class="card-wrap ">
-     <% @advices.each do |advice| %>
-      <div class="card card-show">
-        <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= advice.link.title %></h5>
-          <p class="card-text">Category: <%= advice.link.category %></p>
-          <a href="<%= advice.link.url %>" class="btn btn-primary" target="_blank">Read more</a>
+  </div>
+
+  <div class="container">
+    <div class="show-title padding-20">
+      <h3>Here are some articles that may interest you</h3>
+    </div>
+    <div class="row">
+      <% @advices.each do |advice| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card card-show">
+            <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= advice.link.title %></h5>
+              <p class="card-text">Category: <%= advice.link.category %></p>
+              <a href="<%= advice.link.url %>" class="btn btn-primary" target="_blank">Read more</a>
+            </div>
+          </div>
         </div>
-      </div>
       <% end %>
     </div>
+  </div>
 
-   <h3 class="show-title">Your calendar</h3>
-    <div id= "calendar-show" class="col-8 offset-2">
-       <%= render 'days/calendar' %>
-      <div id="woof-woof" class="col-3 offset-3">
-       <% if @day.valid? %>
-       <h3 class="title-highlight">Date: <%= @day.date %></h3>
-
-        <p>Breast Pain: <%= @day.breast_pain %></p>
-        <p>Head Pain: <%= @day.head_pain %></p>
-        <p style="padding-left: 20px">Abdominal Pain: <%= @day.abdominal_pain %></p>
-        <p>Bleeding: <%= @day.bleeding %></p>
-        <p>Bad Mood: <%= @day.bad_mood %></p>
-        <p> Here's what you wrote : <%= @day.usertext %></p>
-        <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;'%></btn>
-       <% end %>
+    <div class="container">
+    <h3 class="show-title">Your calendar</h3>
+    <div class="row">
+      <div id= "calendar-show" class="col-xs-12 col-md-8">
+        <%= render 'days/calendar' %>
       </div>
-    </div>
-
-    <div class=“arrow-down bounce explanation-arrow”>
-     <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i></a>
+      <div id="woof-woof" class="symptom-level col-xs-12 col-md-4">
+        <% if @day.valid? %>
+        <div class="date-display title-highlight col-xs-12 col-md-12">
+          <h3>Date: <%= @day.date %></h3>
+        </div>
+        <div class="col-xs-12 col-md-12">
+          <h6>Here is what you enterred:</h6>
+        </div>
+        <div class="symptom-display col-xs-12 col-md-6">
+          <p>Breast Pain: <%= @day.breast_pain %></p>
+          <p>Head Pain: <%= @day.head_pain %></p>
+          <p>Abdominal Pain: <%= @day.abdominal_pain %></p>
+        </div>
+        <div class="symptom-display col-xs-12 col-md-6">
+          <p>Bleeding: <%= @day.bleeding %></p>
+          <p>Bad Mood: <%= @day.bad_mood %></p>
+        </div>
+        <div class="col-xs-12 col-md-12">
+          <h6>Here is what you wrote:</h6>
+        </div>
+        <div class="user-text-background-color user-text-display col-xs-12 col-md-12">
+          <p><%= @day.usertext %></p>
+        </div>
+        <div class="button-display">
+          <btn class="btn-display col-xs-12 col-md-12" id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
+        </div>
+        <% end %>
+      </div>
+      <div class=“arrow-down bounce explanation-arrow”>
+        <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i></a>
+      </div>
     </div>
   </div>
 </div>

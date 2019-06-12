@@ -1,20 +1,31 @@
+.card-show {
+  min-width: 200px;
+  height: 450px;
+  margin: 10px;
+  position: relative;
+  box-shadow: 0 0 4px #D67C48;
+  margin-bottom: 32px;
+  a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(91,142,125,0.5);
   margin-top: 4vh;
-  max-width: 16vw;
   margin-left: 2vw;
   border-radius: 5px;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   background-color: #FFFCFA;
 }
 
 
 .card-trip > img {
-  height: 200px;
-  width: 100%;
+  height: 150px;
   object-fit: cover;
 }
 
@@ -24,6 +35,7 @@
   margin: 0;
   color: #5B8E7D;
   font-weight: bolder;
+  padding-bottom: 8px;
 }
 
 .card-trip p {
@@ -57,7 +69,7 @@
 }
 
 #img-size {
-  width: 47%;
+  width: 30%;
   object-fit: contain;
 }
 
@@ -68,7 +80,7 @@
 }
 
 .card-title-underline {
-  background: linear-gradient(180deg,rgba(255,255,255,0) 94%, $orange-underline 20%);
+  background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20%);
 }
 
 .subtitle-display {
@@ -91,4 +103,13 @@ text-align: center;
 
 .background-image-features {
   padding: 2rem;
+}
+
+.user-text-background-color {
+  // border: 2px solid red;
+  background-color: #FFFFFF;
+}
+
+.symptom-display {
+  height: 115px;
 }

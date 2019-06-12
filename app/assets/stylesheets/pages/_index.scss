@@ -90,12 +90,18 @@ p {
   margin-top: 1em;
 }
 
+.btn-primary {
+  color: white;
+  background-color: #5B8E7D;
+  border-color: #5B8E7D;
+  margin-bottom: 1.5em;
+}
+
 .btn-primary:hover {
   color: white;
   background-color: #D5875B;
   border-color: #D5875B;
   margin-bottom: 1.5em;
-  margin-top: 1em;
 }
 
 .title-highlight {
