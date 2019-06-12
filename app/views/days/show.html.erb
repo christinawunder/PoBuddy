@@ -2,7 +2,7 @@
   <a name="up"></a>
   <div id="advices-show" class=" container-show">
     <h3 class="show-title"> Thank you for your trust in Pobuddy</h3>
-    <% if @day.emotion %>
+    <% if @day.emotion.include?("anger" || "sadness" || "joy" || "fear" || "disgust") %>
       <div id="emotion-advice">
         <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
         <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
