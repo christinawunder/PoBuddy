@@ -3,7 +3,7 @@
   height: 450px;
   margin: 10px;
   position: relative;
-  box-shadow: 0 0 4px #D67C48;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 32px;
   a {
     position: absolute;
@@ -21,6 +21,7 @@
   border-radius: 5px;
   padding-bottom: 1rem;
   background-color: #FFFCFA;
+  width: 350px;
 }
 
 
