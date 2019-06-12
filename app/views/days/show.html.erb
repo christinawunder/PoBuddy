@@ -1,33 +1,20 @@
 <div class="background-index">
-  <a name="up"></a>
   <div class="container">
-      <h3 class="show-title"> Thank you for trusting me with your feelings!</h3>
-        <div id="emotion-advice">
-          <div class="title-display title-highlight">
-            <h3>Well, I can feel that you are angry today. Here you can find some advices to deal with your anger:</h3>
-          </div>
-          <ul>
-            <li>Blow some steam with physical exercise! (Runing, jumping, dancing... anything that feels good!)</li>
-            <br>
-            <li>Take a time out. (it’s the occasion to reconnect with yourself, maybe with a little bit of meditation)</li>
-            <br>
-            <li>Take deep breaths. Your heart rate is increases, your muscles tense up. Deep breathing is one of the best ways to relax when in a tense moment.</li>
-            <br>
-            <li>Identify possible solutions. (instead of focusing on what made yu mad, work on resolving the issue at hand)</li>
-            <br>
-            <li>Sleep (a lake of rest influe on your nerves. Turn off your phone, lie down and take a nap!)</li>
-            </ul>
-        </div>
-  </div>
-  <div class="arrow-down bounce explanation-arrow">
-    <a href="#card" id="down-arrow"><i class="fas fa-chevron-down" > </i>
-    </a>
+    <h3 class="show-title"> Thank you for your trust in Pobuddy</h3>
+    <% if @day.emotion %>
+      <div id="emotion-advice">
+        <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
+        <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
+        <%= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
+        <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
+        <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
+      </div>
+    <% end %>
   </div>
 
-    <div class="container">
-      <a name="card"></a>
-      <h3 class="show-title">Here are some articles that may interest you</h3>
-      <div class="row">
+  <div class="container">
+    <h3 class="show-title">Here are some articles that may interest you</h3>
+    <div class="row">
       <% @advices.each do |advice| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="card card-show">
@@ -40,14 +27,10 @@
           </div>
         </div>
       <% end %>
-     </div>
-      <div class=“arrow-down bounce explanation-arrow”>
-       <a href="#calendar" id="down-arrow"><i class="fas fa-chevron-down" > </i>
-       </a>
-      </div>
     </div>
+  </div>
 
-    <a name="calendar"></a>
+  <div class="row">
     <h3 class="show-title">Your calendar</h3>
     <div id= "calendar-show" class="col-xs-12 col-md-8">
       <%= render 'days/calendar' %>
@@ -63,10 +46,6 @@
       <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
       <% end %>
     </div>
-    </div>
-    <div class=“arrow-down bounce explanation-arrow”>
-     <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i>
-     </a>
-    </div>
   </div>
+
 </div>

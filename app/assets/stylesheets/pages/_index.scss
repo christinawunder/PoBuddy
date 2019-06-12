@@ -23,7 +23,7 @@
     margin-top: 1rem;
     box-shadow: 0px 0px 3px lightcoral;
     padding-bottom: 7%;
-    background-color: FFFCFA;
+    background-color: #FFFCFA;
   }
 }
 
@@ -35,7 +35,12 @@
   color: red;
 }
 #greeting-index{
-background-index:  rgba(255, 255, 255, 0.62)
+background-index:  rgba(255, 255, 255, 0.62);
+
+p {
+  font-size: 30px;
+  line-height: 34px;
+}
 }
 
 .display-index {
@@ -93,8 +98,8 @@ background-index:  rgba(255, 255, 255, 0.62)
 }
 
 .title-highlight {
-  background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20%);
-  margin-bottom: 1em;
+background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20%);
+margin-bottom: 1em;
 }
 
 .title-color {
@@ -117,7 +122,18 @@ background-index:  rgba(255, 255, 255, 0.62)
   width: 100px;
   height: 100px;
 }
-
-.welcome-div-width-100 {
+.welcome-title-width-100 {
   width: 100%;
 }
+
+  .index-title {
+  font-size: 50px;
+  word-spacing: 1px;
+  line-height: 90px;
+  text-transform: none;
+  letter-spacing: 4px;
+  color: #181818;
+  text-align: center;
+  margin: 70px;
+  text-shadow: 2px 2px 0px #d5875b;
+  }
