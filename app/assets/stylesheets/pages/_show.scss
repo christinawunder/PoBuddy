@@ -47,9 +47,11 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 display: block;
 margin-top: auto;
 margin-bottom: 5px;
+min-width: 51vw;
+width: initial;
   h3 {
     color: #5B8E7D;
-    padding-bottom: inherit;
+    padding-bottom: 20px;
     font-size: 30px
   }
 
@@ -156,3 +158,6 @@ animation: bounce 4s infinite;
 }
 }
 
+.title-display {
+  justify-content: center;
+}
