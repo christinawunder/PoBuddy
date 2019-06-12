@@ -32,6 +32,8 @@ Link.create!(media: 'Article', title:'Ovulation pain is real !', url: "https://h
 Link.create!(media: 'Article', title: "cramps after period: What's the cause ?", url:"https://www.healthline.com/health/cramps-after-period#causes", category: 'abdominal pain', photo_url: default_pic_abdominal_pain)
 Link.create!(media: 'Article', title: 'What are menstrual cramps?', url:"https://www.webmd.com/women/menstrual-cramps#1", category: 'abdominal pain', photo_url: default_pic_abdominal_pain)
 Link.create!(media: 'Article', title: 'Endometriosis: Are scientists making any headway?', url: "https://www.medicalnewstoday.com/articles/325249.php", category: 'abdominal pain', photo_url: default_pic_abdominal_pain)
+Link.create!(media: 'Article', title: 'Endometriosis is so much worse than a bad period', url: "https://www.thelily.com/endometriosis-is-so-much-worse-than-a-bad-period/", category: 'abdominal pain', photo_url: 'https://www.washingtonpost.com/resizer/wjF3aitQs8pYMWtGbegglQ9MzvM=/1400x0/arc-anglerfish-washpost-prod-thelily-washpost.s3.amazonaws.com/public/A5HCNY7VNVFTZM64P2YXOBKN6M.jpg')
+
 
 Link.create!(media: 'Article', title:'Sensitive breast: 10 causes, other symptoms, treatment and more', url: "https://www.healthline.com/health/sensitive-breast", category: "breast pain", photo_url: default_pic_breast_pain)
 Link.create!(media: 'Article', title:'7 Ways to Manage Painful Premenstrual Breasts ', url: "https://www.verywellhealth.com/cyclic-mastalgia-premenstrual-breast-pain-2721918", category: "breast pain", photo_url: 'https://www.verywellhealth.com/thmb/sJ4zsfUrCUN48XvK9Z8_NiEH3dA=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-AB72518-56a73e543df78cf772939dbd.jpg')

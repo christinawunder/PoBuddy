@@ -24,9 +24,6 @@
   <%= f.label :breast_pain, label: "Breast pain: 0/5", id:"day_breast_pain_label", name: "Breast pain" %>
   <%= range_field(:day, :breast_pain, in: 0..5, value: 0, class: "form-value-slider mdl-slider mdl-js-slider is-upgraded") %>
   <br>
-  <p style="font-size: 20px"> <span style="color: #d5875b"><i class="fas fa-exclamation"></i>Disclaimer <i class="fas fa-exclamation"></i> </span> Even if our advices are good for you,<span style="color: #d5875b">
-    <br>
-  we are not health professionals.</span> If you experience strong pain or psychological distress, <span style="color: #d5875b"> please consult a doctor.</span>  </p>
   <%= f.input :date, as: :hidden, input_html: {value: params[:date]} %>
   <%= f.button :submit, "Let us know" ,class: 'btn btn-primary', id:"btn-color-green" %>
 

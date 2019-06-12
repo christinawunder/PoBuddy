@@ -38,7 +38,7 @@
 background-index:  rgba(255, 255, 255, 0.62);
 
 p {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 34px;
 }
 }
@@ -48,7 +48,7 @@ p {
 }
 
 .symptom-input h1, h2, h3, p {
-  color: black;
+  color: #403E3D;
 }
 
 #user-input{
@@ -66,7 +66,7 @@ p {
 #symptom-input{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.62);
-  margin-top: inherit;
+  margin-top:4vh;
   width: inherit;
   padding: inherit;
 
@@ -101,6 +101,10 @@ p {
 .title-highlight {
 background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20%);
 margin-bottom: 1em;
+}
+
+.welcome {
+  margin-top: 10vh
 }
 
 .title-color {
