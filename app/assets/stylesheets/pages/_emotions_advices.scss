@@ -1,31 +1,31 @@
 
-.emotion-advice{
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.62);
-}
+// .emotion-advice{
+//   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+//   background-color: rgba(255, 255, 255, 0.62);
+// }
 
-#summary {
-  font-size: 14px;
-  line-height: 1.5;
-}
+// #summary {
+//   font-size: 14px;
+//   line-height: 1.5;
+// }
 
-#summary p.collapse:not(.show) {
-    height: 42px !important;
-    overflow: hidden;
+// #summary p.collapse:not(.show) {
+//     height: 42px !important;
+//     overflow: hidden;
 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
+//     display: -webkit-box;
+//     -webkit-line-clamp: 2;
+//     -webkit-box-orient: vertical;
+// }
 
-#summary p.collapsing {
-    min-height: 42px !important;
-}
+// #summary p.collapsing {
+//     min-height: 42px !important;
+// }
 
-#summary a.collapsed:after  {
-    content: '+ Read More';
-}
+// #summary a.collapsed:after  {
+//     content: '+ Read More';
+// }
 
-#summary a:not(.collapsed):after {
-    content: '- Read Less';
-}
+// #summary a:not(.collapsed):after {
+//     content: '- Read Less';
+// }

@@ -10,13 +10,7 @@
         <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
         <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
       </div>
-      <div class=“arrow-down bounce explanation-arrow”>
-       <a href="#card" id="down-arrow"><i class="fas fa-chevron-down" > </i>
-       </a>
-      </div>
     <% end %>
-
-    <a name="card"></a>
     <h3 class="show-title">Here are some articles that may interest you</h3>
     <div class="card-wrap ">
     <% @advices.each do |advice| %>
@@ -30,13 +24,7 @@
       </div>
     <% end %>
    </div>
-    <div class=“arrow-down bounce explanation-arrow”>
-     <a href="#calendar" id="down-arrow"><i class="fas fa-chevron-down" > </i>
-     </a>
-    </div>
-
-    <a name="calendar"></a>
-    <h3 class="show-title">Your calendar</h3>
+   <h3 class="show-title">Your calendar</h3>
     <div id= "calendar-show" class="col-8 offset-2">
       <%= render 'days/calendar' %>
       <div id="woof-woof" class="col-3 offset-3">
