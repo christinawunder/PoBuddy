@@ -13,7 +13,7 @@
     <% end %>
     <h3 class="show-title">Here are some articles that may interest you</h3>
     <div class="card-wrap ">
-    <% @advices.each do |advice| %>
+     <% @advices.each do |advice| %>
       <div class="card card-show">
         <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
         <div class="card-body">
@@ -22,26 +22,29 @@
           <a href="<%= advice.link.url %>" class="btn btn-primary" target="_blank">Read more</a>
         </div>
       </div>
-    <% end %>
-   </div>
+      <% end %>
+    </div>
+
    <h3 class="show-title">Your calendar</h3>
     <div id= "calendar-show" class="col-8 offset-2">
-      <%= render 'days/calendar' %>
+       <%= render 'days/calendar' %>
       <div id="woof-woof" class="col-3 offset-3">
        <% if @day.valid? %>
        <h3 class="title-highlight">Date: <%= @day.date %></h3>
+
         <p>Breast Pain: <%= @day.breast_pain %></p>
         <p>Head Pain: <%= @day.head_pain %></p>
         <p style="padding-left: 20px">Abdominal Pain: <%= @day.abdominal_pain %></p>
         <p>Bleeding: <%= @day.bleeding %></p>
         <p>Bad Mood: <%= @day.bad_mood %></p>
-        <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
-        <% end %>
+        <p> Here's what you wrote : <%= @day.usertext %></p>
+        <btn id="destroy-data"><%= link_to "Delete data for this day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;'%></btn>
+       <% end %>
       </div>
     </div>
+
     <div class=“arrow-down bounce explanation-arrow”>
-     <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i>
-     </a>
+     <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i></a>
     </div>
   </div>
 </div>
