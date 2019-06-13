@@ -28,47 +28,62 @@ class AdvicesCombinator
   end
 
   def bleeding_links
-    @link = Link.where(category: 'bleeding').sample
     if @day.bleeding >= 1 && @day.bleeding < 4
+      @link = Link.where(category: 'bleeding').sample
       create_advice(@link, @day)
     elsif @day.bleeding >= 4
-      2.times { create_advice(@link, @day) }
+      links = Link.where(category: 'bleeding').sample(2)
+      links.each do |link|
+        create_advice(link, @day)
+      end
     end
   end
 
   def bad_mood_links
-    @link = Link.where(category: 'bad mood').sample
     if @day.bad_mood >= 1 && @day.bad_mood < 4
+      @link = Link.where(category: 'bad mood').sample
       create_advice(@link, @day)
     elsif @day.bad_mood >= 4
-      2.times { create_advice(@link, @day) }
+      links = Link.where(category: 'bad mood').sample(2)
+      links.each do |link|
+        create_advice(link, @day)
+      end
     end
   end
 
   def head_pain_links
-    @link = Link.where(category: 'head pain').sample
     if @day.head_pain >= 1 && @day.head_pain < 4
+      @link = Link.where(category: 'head pain').sample
       create_advice(@link, @day)
     elsif @day.head_pain >= 4
-      2.times { create_advice(@link, @day) }
+      links = Link.where(category: 'head pain').sample(2)
+      links.each do |link|
+        create_advice(link, @day)
+      end
     end
   end
 
   def abdominal_pain_links
-    @link = Link.where(category: 'abdominal pain').sample
     if @day.abdominal_pain >= 1 && @day.abdominal_pain < 4
+      @link = Link.where(category: 'abdominal pain').sample
       create_advice(@link, @day)
     elsif @day.abdominal_pain >= 4
-      2.times { create_advice(@link, @day) }
+      links = Link.where(category: 'abdominal pain').sample(2)
+      links.each do |link|
+        create_advice(link, @day)
+      end
     end
   end
 
   def breast_pain_links
-    @link = Link.where(category: 'breast pain').sample
     if @day.breast_pain >= 1 && @day.breast_pain < 4
+      @link = Link.where(category: 'breast pain').sample
       create_advice(@link, @day)
     elsif @day.breast_pain >= 4
-      2.times { create_advice(@link, @day) }
+      links = Link.where(category: 'breast pain').sample(2)
+      links.each do |link|
+        create_advice(link, @day)
+      end
     end
   end
 end

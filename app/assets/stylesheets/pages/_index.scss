@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "show";
+@import "emotions_advices";
 
 .background-index{
  background-color:#fff8f1;
@@ -38,7 +39,7 @@
 background-index:  rgba(255, 255, 255, 0.62);
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 34px;
 }
 }
@@ -107,7 +108,11 @@ p {
 .title-highlight {
 background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20%);
 margin-bottom: 1em;
+<<<<<<< HEAD
 padding-top: 1em;
+=======
+color:#5b9096
+>>>>>>> master
 }
 
 .welcome {

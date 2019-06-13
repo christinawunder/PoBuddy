@@ -1,16 +1,26 @@
 <div class="background-index">
-
-  <div class="container pt-5">
-      <a name="up"></a>
-       <% if @day.emotion.include?("anger" || "sadness" || "joy" || "fear" || "disgust") %>
+  <div class="container">
+    <div class="show-title">
+      <h3>Thank you for your trust in Pobuddy</h3>
+    </div>
+    <% unless @day.emotion.blank? %>
+      <%# if @day.emotion&.valid_emotion? %>
+        <!-- <div id="emotion-advice"> -->
+          <%#= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
+          <%#= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
+          <%#= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
+          <%#= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
+          <%#= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
+        <!-- </div> -->
+      <%# end %>
+      <% if @day.matching_emotions.any? %>
         <div id="emotion-advice">
-          <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
-          <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
-          <%= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
-          <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
-          <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
+          <% @day.matching_emotions.each do |emotion| %>
+            <%= render "emotions_advices/#{emotion}" %>
+          <% end %>
         </div>
       <% end %>
+    <% end %>
   </div>
 
   <div class="container">
@@ -21,7 +31,8 @@
       <% @advices.each do |advice| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="card card-show">
-            <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
+            <div class="card-image" style="background-image: url('<%= advice.link.photo_url %>')"></div>
+            <!-- <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap"> -->
             <div class="card-body">
               <h5 class="card-title"><%= advice.link.title %></h5>
               <p class="card-text">Category: <%= advice.link.category %></p>
@@ -66,9 +77,6 @@
           <btn class="btn-display col-xs-12 col-md-12" id="destroy-data"><%= link_to "Delete day", day_path(@day), method: :delete, :style=>'background-color: #5B8E7D;''border-radius: 5px;''text-decoration: none;''color: white;''border-color: black;''border-width: 1px;''padding: 5px;' %></btn>
         </div>
         <% end %>
-      </div>
-      <div class="arrow-down bounce explanation-arrow">
-        <a href="#up" id="down-arrow"><i class="fas fa-chevron-up"></i></a>
       </div>
     </div>
   </div>
