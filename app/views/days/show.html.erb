@@ -31,7 +31,8 @@
       <% @advices.each do |advice| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="card card-show">
-            <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap">
+            <div class="card-image" style="background-image: url('<%= advice.link.photo_url %>')"></div>
+            <!-- <img class="card-img-top" src="<%= advice.link.photo_url %>" alt="Card image cap"> -->
             <div class="card-body">
               <h5 class="card-title"><%= advice.link.title %></h5>
               <p class="card-text">Category: <%= advice.link.category %></p>
