@@ -5,13 +5,20 @@
     </div>
     <a name="up"></a>
     <% unless @day.emotion.blank? %>
-      <% if @day.valid_emotion? %>
+      <%# if @day.emotion&.valid_emotion? %>
+        <!-- <div id="emotion-advice"> -->
+          <%#= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
+          <%#= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
+          <%#= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
+          <%#= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
+          <%#= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
+        <!-- </div> -->
+      <%# end %>
+      <% if @day.matching_emotions.any? %>
         <div id="emotion-advice">
-          <%= render 'emotions_advices/anger' if @day.emotion.include?("anger") %>
-          <%= render 'emotions_advices/sadness' if @day.emotion.include?("sadness") %>
-          <%= render 'emotions_advices/joy' if @day.emotion.include?("joy") %>
-          <%= render 'emotions_advices/fear' if @day.emotion.include?("fear") %>
-          <%= render 'emotions_advices/disgust' if @day.emotion.include?("disgust") %>
+          <% @day.matching_emotions.each do |emotion| %>
+            <%= render "emotions_advices/#{emotion}" %>
+          <% end %>
         </div>
       <% end %>
     <% end %>

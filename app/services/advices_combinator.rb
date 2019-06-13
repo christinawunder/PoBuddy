@@ -37,11 +37,14 @@ class AdvicesCombinator
   end
 
   def bad_mood_links
-    @link = Link.where(category: 'bad mood').sample
     if @day.bad_mood >= 1 && @day.bad_mood < 4
+      @link = Link.where(category: 'bad mood').sample
       create_advice(@link, @day)
     elsif @day.bad_mood >= 4
-      2.times { create_advice(@link, @day) }
+      links = Link.where(category: 'bad mood').sample(2)
+      links.each do |link|
+        create_advice(link, @day)
+      end
     end
   end
 

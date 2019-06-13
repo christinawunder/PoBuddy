@@ -13,7 +13,13 @@ class Day < ApplicationRecord
 
   def valid_emotion?
     (EMOTIONS - emotion).size != EMOTIONS.size
+     # -> any matching pairs
   end
+
+  def matching_emotions
+    (EMOTIONS & emotion)
+  end
+
 
   def pain?
     head_pain || abdominal_pain || breast_pain
