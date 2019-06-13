@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create(email: "test@test.com", password: "123456789")
+User.create!(email: "test@test.com", password: "123456789")
 
 Day.destroy_all
 Day.create!(date: Date.today - 26, bleeding: 3, bad_mood: 3, head_pain: 4, abdominal_pain: 4, breast_pain: 2, user_id: 1)
@@ -17,6 +17,7 @@ Day.create!(date: Date.today - 28, bleeding: 5, bad_mood: 3, head_pain: 2, abdom
 default_pic_bleeding_1 = 'https://images.unsplash.com/photo-1531354755998-195b9eca7061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80'
 default_pic_bleeding_2 = 'https://images.unsplash.com/photo-1517355236730-cdedf90a2da3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=720&q=80'
 default_pic_bleeding_3 = 'https://images.unsplash.com/photo-1461407253610-78178a3f453f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+default_pic_bleeding_4 = 'https://images.unsplash.com/photo-1482872376051-5ce74ebf0908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1638&q=80'
 default_pic_abdominal_pain_1 = 'https://images.unsplash.com/photo-1505334559002-c2103a3e106b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
 default_pic_abdominal_pain_2 = 'https://images.unsplash.com/photo-1434973539530-5538b4681aac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
 default_pic_abdominal_pain_3 = 'https://images.unsplash.com/photo-1529703713744-8121a2e8cd0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
@@ -43,7 +44,7 @@ Link.create!(media: 'Article', title:'What is normal menstrual cycle length and 
 Link.create!(media: 'Article', title: 'What does the blood color mean ?', url:"https://www.medicalnewstoday.com/articles/324848.php", category: 'bleeding', photo_url: default_pic_bleeding_1)
 Link.create!(media: 'Article', title: 'Heavy menstrual bleeding', url:"https://www.cdc.gov/ncbddd/blooddisorders/women/menorrhagia.html", category: 'bleeding', photo_url: default_pic_bleeding_2)
 Link.create!(media: 'Article', title: 'Menstrual clots: Are they normal?', url:"https://www.medicalnewstoday.com/articles/322707.php", category: 'bleeding', photo_url: default_pic_bleeding_3)
-Link.create!(media: 'Article', title: 'All about menstrual blood', url:"https://www.plim.fr/en/content/19-about-menstrual-blood", category: 'bleeding', photo_url: 'https://www.plim.fr/img/pied.jpg')
+Link.create!(media: 'Article', title: 'All about menstrual blood', url:"https://www.plim.fr/en/content/19-about-menstrual-blood", category: 'bleeding', photo_url: default_pic_bleeding_4)
 
 Link.create!(media: 'Article', title:'Ovulation pain is real !', url: "https://helloclue.com/articles/cycle-a-z/ovulation-pain-101", category: 'abdominal pain', photo_url: 'https://images.ctfassets.net/juauvlea4rbf/1LTaIBUteFuJTFAhl7vEBb/921b861282e7f12ffb88ca7485576a2f/ovulation_pain_contenful.svg?w=1920&h=960&fit=fill')
 Link.create!(media: 'Article', title: "cramps after period: What's the cause ?", url:"https://www.healthline.com/health/cramps-after-period#causes", category: 'abdominal pain', photo_url: default_pic_abdominal_pain_1)
