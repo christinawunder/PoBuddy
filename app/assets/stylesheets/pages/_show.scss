@@ -34,15 +34,9 @@ height: initial;
     font-size: 30px
   }
 
-<<<<<<< HEAD
-  li {
-    font-size: 20px;
-    list-style-type: none;
-=======
   p, li {
-    font-size: 18px;
+    font-size: 19px;
     color: #403E3D;
->>>>>>> master
   }
 
 }
@@ -106,6 +100,8 @@ height: initial;
 
 .user-text-display {
   padding-top: 20px;
+  overflow: scroll;
+  max-height: 250px;
 }
 
 .btn-display {
