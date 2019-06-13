@@ -1,14 +1,15 @@
 .navbar-lewagon {
   // background: #719d8e;
-  background-color: #F7EEE3;
+  background-color: #F7E5CF;
   opacity: 0.85;
   width: 100vw;
   position: sticky;
   top: 0;
   margin-bottom: 0px;
-  // position: absolute;
+  height: 64px;
   position: relative;
 }
+
 #navbar-space{
   display: flex;
   justify-content: space-around;
@@ -16,13 +17,14 @@
 
 .navbar-lewagon .navbar-brand img {
   max-width: 100px;
-  margin: 0 11rem;
+  position: absolute;
+  left: 25px;
 }
 .nav-item{
 
 font-size: 20px;
 line-height: 1rem;
-font-family: Soleil,Helvetica,Arial,sans-serif;
+font-family: Roboto,Helvetica,Arial,sans-serif;
 font-weight: 100;
 letter-spacing: .08334rem;
 text-transform: uppercase;

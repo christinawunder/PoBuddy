@@ -50,12 +50,12 @@
       <div id= "calendar-show" class="col-xs-12 col-md-8">
         <%= render 'days/calendar' %>
       </div>
-      <div id="woof-woof" class="symptom-level col-xs-12 col-md-4">
+      <div id="woof-woof" class="col-xs-12 col-md-4">
         <% if @day.valid? %>
         <div class="date-display title-highlight col-xs-12 col-md-12">
           <h3>Date: <%= @day.date %></h3>
         </div>
-        <div class="little-title-display col-xs-12 col-md-12">
+        <div class="little-title-display">
           <h6>Here is what you entered:</h6>
         </div>
         <div class="symptom-display col-xs-12 col-md-6">
@@ -67,7 +67,7 @@
           <p>Bleeding: <%= @day.bleeding %></p>
           <p>Bad Mood: <%= @day.bad_mood %></p>
         </div>
-        <div class="little-title-display col-xs-12 col-md-12">
+        <div class="little-title-display">
           <h6>Here is what you wrote:</h6>
         </div>
         <div class="user-text-background-color user-text-display col-xs-12 col-md-12">

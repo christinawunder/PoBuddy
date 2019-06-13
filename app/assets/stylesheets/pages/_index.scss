@@ -52,6 +52,11 @@ p {
   color: #403E3D;
 }
 
+.symptom-input p {
+  font-size: 18px;
+}
+
+
 #user-input{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.62);
@@ -108,6 +113,7 @@ p {
 .title-highlight {
 background: linear-gradient(180deg,rgba(255,255,255,0) 96%, $orange-underline 20%);
 margin-bottom: 1em;
+padding-top: 1em;
 color:#5b9096
 }
 
