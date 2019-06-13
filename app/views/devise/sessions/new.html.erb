@@ -1,14 +1,14 @@
 <div class="container-page">
   <div class="container-banner">
     <div class="row" id="row-banner">
-      <div class="col-sm-12 col-md-6 title-padding">
+      <div class="col-xs-12 col-md-6 title-padding">
         <h1>Pobuddy</h1>
         <h3>Personalised cycle support for you</h3>
         <br>
         <a href="#redirect-to-features" class="button">Learn how</a>
       </div>
 
-      <div class="sign-form col-sm-12 col-md-6">
+      <div class="sign-form col-xs-12 col-md-5">
         <h2 id="title-color">Log in</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -35,10 +35,12 @@
 
   <div class="background-image-template">
     <div id="redirect-to-features" class="background-image-features">
-      <div class="subtitle-display margin-bottom">
-        <h2 id="text-highlight">Learn about your cycle with tailor-made health advice</h2>
-        <div class="cards-display">
-          <div class="card-trip">
+      <div class="subtitle-display margin-bottom col-xs-12 col-md-12">
+        <h2>Learn about your cycle with tailor-made health advice</h2>
+        <div id="text-highlight">
+        </div>
+        <div class="cards-display row">
+          <div class="card-trip col-xs-12 col-md-3">
               <%= image_tag "speak-bubble-green.png", alt: "alttext" %>
             <div class="card-trip-infos" id="padding-top-card-trip-infos">
               <div>
@@ -48,7 +50,7 @@
             </div>
           </div>
 
-          <div class="card-trip">
+          <div class="card-trip col-xs-12 col-md-3">
             <%= image_tag "analyse-data-green.png", alt: "alttext", id:"img-size" %>
             <div class="card-trip-infos" id="padding-top-card-trip-infos" >
               <div >
@@ -58,7 +60,7 @@
             </div>
           </div>
 
-          <div class="card-trip">
+          <div class="card-trip col-xs-12 col-md-3">
             <%= image_tag "paper-plane-green.png", alt: "alttext", id:"img-size" %>
             <div class="card-trip-infos" id="padding-top-card-trip-infos">
               <div>

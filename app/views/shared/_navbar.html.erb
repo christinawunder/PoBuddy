@@ -1,23 +1,16 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon pt-0">
+    <div class="collapse navbar-collapse" id="navbar-space">
+      <ul class="navbar-nav ">
 
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbar-space">
-    <ul class="navbar-nav ">
-
-      <li>
-        <%= link_to "#{root_path}", class: "navbar-brand" do %>
-        <%= image_tag "logo-no-p.png", alt: "alttext", class: "img-responsive2" %>
-        <% end %>
-      </li>
+        <li>
+          <%= link_to "#{root_path}", class: "navbar-brand" do %>
+          <%= image_tag "logo-no-p.png", alt: "alttext" %>
+          <% end %>
+        </li>
 
         <li id="navbar-link-display">
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-item  nav-link" %>
-      </li>
-    </ul>
-  </div>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-item  nav-link" %>
+        </li>
+      </ul>
+    </div>
 </div>
