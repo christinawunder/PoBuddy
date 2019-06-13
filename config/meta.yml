@@ -1,0 +1,8 @@
+meta_product_name: "Pobuddy"
+meta_title: "Pobuddy: Personalised cycle support for you"
+meta_description: "Pobuddy allows you to track your cycle in an emotionally supportive way.
+  You tell it what’s on your mind and how you feel today.
+  Pobuddy’s sophisticated algorithms will provide you with personalised emotional support
+  and health advice – tailored to how you feel and to what you need."
+meta_image: "banner-sign-up-page.jpeg" # should exist in `app/assets/images/`
+twitter_account: "@christinawunder"   # required for Twitter Cards
