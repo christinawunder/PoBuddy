@@ -4,5 +4,5 @@ meta_description: "Pobuddy allows you to track your cycle in an emotionally supp
   You tell it what’s on your mind and how you feel today.
   Pobuddy’s sophisticated algorithms will provide you with personalised emotional support
   and health advice – tailored to how you feel and to what you need."
-meta_image: "metapicture.png" # should exist in `app/assets/images/`
+meta_image: "MetaPicture.png" # should exist in `app/assets/images/`
 twitter_account: "@christinawunder"   # required for Twitter Cards
