@@ -1,6 +1,13 @@
 class DaysController < ApplicationController
   before_action :find_day, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: :about
+# Dear friends, it has been an honour and a priviledge to work
+# with you on this project. All the best in your new conquests,
+# whether they be in the business side or developer side,
+# Nikos
+
+
+# // /╲/\[☉﹏☉]/\╱\ <-- spider! AHH! 🕷️
 
   def index
     @days = policy_scope(Day).where(user: current_user)
@@ -69,6 +76,6 @@ class DaysController < ApplicationController
   end
 
   def day_params
-    params.require(:day).permit(:bleeding, :bad_mood, :head_pain, :abdominal_pain, :breast_pain, :date, :user_id, :emotion, :usertext)
+    params.require(:day).permit(:bleeding, :bad_mood, :head_pain, :abdominal_pain, :breast_pain, :date, :user_id, :emotion, :usertext, :text)
   end
 end
